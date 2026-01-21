@@ -1,4 +1,74 @@
 @use "global" as *;
 
+.c-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: rem(18) rem(15) rem(18) rem(18);
+  font-size: rem(14);
+  font-weight: 600;
+  letter-spacing: 0.037em;
+  line-height: 1;
+  color: $white;
+  background: linear-gradient(
+    180deg,
+    #333 0%,
+    #000 100%);
+  border-radius: rem(5);
+  border: 1.5px solid $white;
+  overflow: hidden;
+  transition: all .3s;
+  @include mq(md) {
+    padding: rem(23) rem(35) rem(22) rem(50);
+    font-size: rem(22);
+    border-radius: rem(10);
+    border: 3px solid $blue;
+  }
+}
 
+.c-btn:hover {
+  background: linear-gradient(
+    180deg,
+    #444 0%,
+    #111 100%);
+}
 
+.c-btn span {
+  position: absolute;
+  right: rem(15);
+  width: rem(11);
+  height: rem(11);
+  border-radius: 50%;
+  background: $white;
+  @include mq(md) {
+    right: rem(35);
+    width: rem(22);
+    height: rem(22);
+  }
+}
+
+.c-btn span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(3) 0 rem(3) rem(5);
+  border-color: transparent transparent transparent $black;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    border-width: rem(6) 0 rem(6) rem(10);
+  }
+}
+
+.p-btn {
+  width: rem(240);
+  margin: 0 auto;
+  @include mq(md) {
+    width: rem(420);
+    // margin: rem(55) auto 0;
+  }
+}
