@@ -17,7 +17,6 @@
     #000 100%);
   border-radius: rem(5);
   border: 1.5px solid $white;
-  overflow: hidden;
   transition: all .3s;
   @include mq(md) {
     padding: rem(23) rem(35) rem(22) rem(50);
@@ -25,13 +24,6 @@
     border-radius: rem(10);
     border: 3px solid $blue;
   }
-}
-
-.c-btn:hover {
-  background: linear-gradient(
-    180deg,
-    #444 0%,
-    #111 100%);
 }
 
 .c-btn span {
@@ -69,6 +61,5 @@
   margin: 0 auto;
   @include mq(md) {
     width: rem(420);
-    // margin: rem(55) auto 0;
   }
 }
