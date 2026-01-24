@@ -1,0 +1,139 @@
+@use "global" as *;
+
+.c-card {
+  display: flex;
+  background-color: $lightblue;
+  gap: rem(10);
+  padding: rem(19.5) rem(13) rem(20.5) rem(22);
+  border-radius: rem(7.5);
+  @include mq(md) {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(26);
+    padding: rem(35) rem(16) rem(31);
+    border-radius: rem(15);
+  }
+}
+
+.c-card__image {
+  width: rem(101);
+  @include mq(md) {
+    width: rem(160);
+  }
+}
+
+.c-card__image img {
+  aspect-ratio: 101/75;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 160/118;
+  }
+}
+
+.c-card__text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: rem(18);
+  font-weight: 600;
+  @include mq(md) {
+    line-height: 1.7;
+    letter-spacing: 0.037em;
+  }
+}
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(27);
+  }
+}
+
+.p-card .c-card {
+  @include mq(md) {
+    width: rem(230);
+    height: rem(270);
+  }
+}
+
+/*-------------------------------------------
+c-card--second
+-------------------------------------------*/
+.c-card--second {
+  gap: rem(20);
+  padding: rem(18) rem(22.5) rem(16) rem(27.5);
+  @include mq(md) {
+    padding: rem(31) rem(16) rem(37);
+  }
+}
+
+.c-card--second .c-card__image{
+  width: rem(93);
+  @include mq(md) {
+    width: rem(145);
+  }
+}
+
+.c-card--second .c-card__image img {
+  aspect-ratio: 93/81;
+  @include mq(md) {
+    aspect-ratio: 145/126;
+  }
+}
+
+/*-------------------------------------------
+c-card--third
+-------------------------------------------*/
+.c-card--third {
+  gap: rem(10);
+  padding: rem(20) rem(13) rem(21) rem(23);
+  @include mq(md) {
+    gap: rem(25);
+    padding: rem(31) rem(12) rem(37);
+  }
+}
+
+.c-card--third .c-card__image {
+  width: rem(101);
+  @include mq(md) {
+    width: rem(164);
+  }
+}
+
+.c-card--third .c-card__image img {
+  aspect-ratio: 101/74;
+  @include mq(md) {
+    aspect-ratio: 164/121;
+  }
+}
+
+/*-------------------------------------------
+c-card--fourth
+-------------------------------------------*/
+.c-card--fourth {
+  gap: rem(12);
+  padding: rem(14) 0 rem(12.5) rem(27);
+  @include mq(md) {
+    gap: rem(17);
+    padding: rem(23) rem(3) rem(37);
+  }
+}
+
+.c-card--fourth .c-card__image {
+  width: rem(85);
+  @include mq(md) {
+    width: rem(132);
+  }
+}
+
+.c-card--fourth .c-card__image img {
+  aspect-ratio: 85/88.5;
+  @include mq(md) {
+    aspect-ratio: 132/138;
+  }
+}
