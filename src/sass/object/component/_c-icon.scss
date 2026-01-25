@@ -32,7 +32,7 @@
   font-size: calc(13 / 375 * 100vw);
   font-weight: 600;
   line-height: calc(17 / 13);
-  letter-spacing: 0.037em;
+  letter-spacing: .037em;
   @include mq(md) {
     font-size: rem(24);
     line-height: calc(32 / 24);

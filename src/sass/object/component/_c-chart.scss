@@ -168,12 +168,12 @@
   text-align: center;
   margin-top: rem(7);
   font-size: rem(19);
-  letter-spacing: 0.037em;
+  letter-spacing: .037em;
   line-height: calc(25 / 19);
   font-weight: 600;
   @include mq(md) {
     font-size: rem(26);
-    letter-spacing: 0.075em;
+    letter-spacing: .075em;
     line-height: calc(34 / 26);
   }
 }

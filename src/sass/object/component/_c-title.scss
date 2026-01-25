@@ -3,7 +3,7 @@
 .c-title {
   font-size: rem(24);
   line-height: calc(37.5 / 24);
-  letter-spacing: 0.02em;
+  letter-spacing: .02em;
   font-weight: 700;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
   content: attr(data-en);
   font-size: rem(12);
   line-height: 1;
-  letter-spacing: 0.037em;
+  letter-spacing: .037em;
   font-weight: 400;
   color: $blue;
   @include mq(md) {

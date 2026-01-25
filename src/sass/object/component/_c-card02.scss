@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.c-card02__image {
+  position: relative;
+  width: 100%;
+}
+
+.c-card02__image img {
+  aspect-ratio: 213/142;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 230/153;
+  }
+}
+
+.c-card02__number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: rem(74);
+  height: rem(32.5);
+  background: $blue;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(19);
+  letter-spacing: .037em;
+  font-weight: 700;
+  @include mq(md) {
+    width: rem(80);
+    height: rem(35);
+    font-size: rem(22);
+    letter-spacing: .075em;
+  }
+}
+
+.c-card02__title {
+  font-size: rem(16);
+  letter-spacing: .037em;
+  font-weight: 600;
+  @include mq(md) {
+    font-size: rem(18);
+    letter-spacing: .075em;
+    font-weight: 700;
+  }
+}
+
+.c-card02__wrapper {
+  padding: rem(12) rem(17) rem(17) rem(11.5);
+  background-color: $lightblue02;
+  @include mq(md) {
+    padding: rem(12) rem(24) rem(17) rem(12);
+  }
+}
+
+.c-card02__text {
+  font-size: rem(14);
+  line-height: calc(20 / 14);
+  margin-top: rem(8);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(26 / 16);
+  }
+}
+
+
+.p-card02 .c-card02 {
+  width: rem(213);
+  @include mq(md) {
+    width: rem(230);
+  }
+}
