@@ -1,0 +1,190 @@
+@use "global" as *;
+
+.c-chart {
+  position: relative;
+  width: rem(238);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      #bbd0e4 0% 8%, /* その他 */
+      #ebaf7b 8% 62%, /* 30代 54% */
+      #bbd0e4 62% 92%, /* 40代 30% */
+      #e6eef6 92% 100% /* その他 */
+    );
+  @include mq(md) {
+    width: rem(326);
+  }
+}
+
+.c-chart--income {
+  background:
+    conic-gradient(
+      #bbd0e4 0% 33%, /* その他 */
+      #ebaf7b 33% 66%, /* 600〜799万 33%*/
+      #bbd0e4 66% 85%, /* 800〜999万 19% */
+      #e6eef6 85% 100% /* その他 */
+    );
+}
+
+
+.c-chart::before {
+  content: "";
+  position: absolute;
+  inset: 25%;
+  background: $white;
+  border-radius: 50%;
+}
+
+.c-chart--income::before {
+  inset: 23%;
+}
+
+.c-chart__center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: rem(19);
+  color: $blue;
+  z-index: 1;
+  @include mq(md) {
+    font-size: rem(26);
+  }
+}
+
+.c-chart__label {
+  position: absolute;
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.c-chart__category {
+  display: block;
+  font-size: rem(20);
+  font-weight: 500;
+  @include mq(md) {
+    font-size: rem(27);
+  }
+}
+
+.c-chart__rate {
+  display: block;
+  font-size: rem(29);
+  font-weight: 600;
+  @include mq(md) {
+    font-size: rem(38);
+  }
+}
+
+.c-chart__label--orange {
+  color: $white;
+  text-shadow:
+    2px 2px 2px $orange,
+    -2px -2px 2px $orange,
+    -2px 2px 2px $orange,
+    2px -2px 2px $orange,
+    2px 0 2px $orange,
+    -2px 0 2px $orange,
+    0 2px 2px $orange,
+    0 -2px 2px $orange;
+  @include mq(md) {
+    text-shadow:
+      4px 4px 4px $orange,
+      -4px -4px 4px $orange,
+      -4px 4px 4px $orange,
+      4px -4px 4px $orange,
+      4px 0 4px $orange,
+      -4px 0 4px $orange,
+      0 4px 4px $orange,
+      0 -4px 4px $orange;
+  }
+}
+
+.c-chart__label--blue {
+  color: $white;
+  text-shadow:
+    2px 2px 2px $blue,
+    -2px -2px 2px $blue,
+    -2px 2px 2px $blue,
+    2px -2px 2px $blue,
+    2px 0 2px $blue,
+    -2px 0 2px $blue,
+    0 2px 2px $blue,
+    0 -2px 2px $blue;
+  @include mq(md) {
+    text-shadow:
+      4px 4px 4px $blue,
+      -4px -4px 4px $blue,
+      -4px 4px 4px $blue,
+      4px -4px 4px $blue,
+      4px 0 4px $blue,
+      -4px 0 4px $blue,
+      0 4px 4px $blue,
+      0 -4px 4px $blue;
+  }
+}
+
+.c-chart__label--30 {
+  right: rem(1);
+  bottom: rem(51);
+  @include mq(md) {
+    right: rem(6);
+    bottom: rem(73);
+  }
+}
+
+.c-chart__label--40 {
+  left: rem(-4);
+  top: rem(88);
+  @include mq(md) {
+    left: rem(-9);
+    top: rem(121);
+  }
+}
+
+.c-chart__label--600 {
+  right: rem(38);
+  bottom: rem(7);
+  @include mq(md) {
+    right: rem(56);
+    bottom: rem(10);
+  }
+}
+
+.c-chart__label--800 {
+  left: rem(-29);
+  top: rem(104);
+  @include mq(md) {
+    left: rem(-41);
+    top: rem(141);
+  }
+}
+
+.p-chart__text {
+  text-align: center;
+  margin-top: rem(7);
+  font-size: rem(19);
+  letter-spacing: 0.037em;
+  line-height: calc(25 / 19);
+  font-weight: 600;
+  @include mq(md) {
+    font-size: rem(26);
+    letter-spacing: 0.075em;
+    line-height: calc(34 / 26);
+  }
+}
+
+.p-chart {
+  display: flex;
+  flex-direction: column;
+  gap: rem(32);
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(66);
+  }
+}
