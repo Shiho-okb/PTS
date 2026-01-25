@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.c-card04 {
+  display: flex;
+  gap: rem(20);
+  @include mq(md) {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(17);
+  }
+}
+
+.c-card04__image {
+  width: rem(109);
+  height: rem(109);
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  background: $lightblue02;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  @include mq(md) {
+    width: rem(172);
+    height: rem(172);
+  }
+}
+
+.c-card04__image img {
+  width: rem(46);
+  height: rem(69);
+  object-fit: cover;
+  @include mq(md) {
+    width: rem(74);
+    height: rem(109);
+  }
+}
+
+.c-card04__title {
+  position: relative;
+  font-size: rem(19);
+  letter-spacing: .037em;
+  font-weight: 600;
+  color: $blue;
+  @include mq(md) {
+    font-size: rem(22);
+    letter-spacing: .075em;
+    text-align: center;
+  }
+}
+
+.c-card04__text {
+  font-size: rem(14);
+  letter-spacing: -0.05em;
+  line-height: calc(20 / 14);
+  margin-top: rem(18);
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(26 / 16);
+    margin-top: rem(27);
+  }
+}
+
+.c-card04__title::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-8);
+  left: rem(0.5);
+  width: rem(28);
+  height: rem(2);
+  background-color: $blue;
+  @include mq(md) {
+    bottom: rem(-13);
+    left: rem(69);
+    width: rem(35);
+  }
+}
+
+.p-card04 {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
