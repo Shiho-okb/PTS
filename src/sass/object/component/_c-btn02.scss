@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.c-btn02 {
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  font-size: rem(16);
+  font-weight: 500;
+  letter-spacing: .037em;
+  width: 100%;
+  border-radius: rem(25);
+  padding-block: rem(10);
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.c-btn02--original {
+  background-color: $blue02;
+}
+
+.c-btn02--second {
+  background-color: $black;
+}
+
+.p-btn02 {
+  display: flex;
+  gap: rem(5);
+  margin-inline: rem(20);
+}
+
+.c-btn02__char {
+  display: inline-block;
+}
+
+.c-btn02__char+.c-btn02__char {
+  margin-left: rem(18);
+}
