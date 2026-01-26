@@ -14,6 +14,10 @@
   position: relative;
   overflow: hidden;
   transition: all .3s;
+  @include mq(md) {
+    padding-block: rem(8);
+    letter-spacing: .075em;
+  }
 }
 
 .c-btn02--original {
@@ -24,16 +28,21 @@
   background-color: $black;
 }
 
-.p-btn02 {
-  display: flex;
-  gap: rem(5);
-  margin-inline: rem(20);
-}
-
 .c-btn02__char {
   display: inline-block;
 }
 
 .c-btn02__char+.c-btn02__char {
   margin-left: rem(18);
+}
+
+.p-btn02 {
+  display: flex;
+  gap: rem(5);
+  margin-inline: rem(20);
+  @include mq(md) {
+    flex-direction: column;
+    gap: rem(10);
+    margin-inline: 0 rem(20);
+  }
 }
