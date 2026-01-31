@@ -5,17 +5,18 @@
   display: inline-flex;
   align-items: center;
   font-size: rem(16);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: .037em;
+  line-height: 1;
   width: 100%;
   border-radius: rem(25);
-  padding-block: rem(10);
+  padding-block: rem(15);
   justify-content: center;
   position: relative;
   overflow: hidden;
   transition: all .3s;
   @include mq(md) {
-    padding-block: rem(8);
+    padding-block: rem(12.5);
     letter-spacing: .075em;
   }
 }

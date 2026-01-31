@@ -1,0 +1,168 @@
+@use "global" as *;
+
+.c-card03 {
+  position: relative;
+}
+
+.c-card03__contents {
+  position: relative;
+  @include mq(md) {
+    max-width: rem(814);
+  }
+}
+
+.c-card03__contents::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: $lightblue;
+  z-index: -1;
+}
+
+.c-card03__head {
+  display: flex;
+  gap: rem(10);
+  @include mq(md) {
+    gap: rem(24);
+  }
+}
+
+.c-card03__num {
+  font-family: $font-sub;
+  font-size: rem(50);
+  font-weight: 700;
+  letter-spacing: .037em;
+  line-height: 1;
+  color: #ffddba;
+  @include mq(md) {
+    font-size: rem(64);
+    letter-spacing: .075em;
+  }
+}
+
+.c-card03__title {
+  font-size: rem(22);
+  font-weight: 700;
+  line-height: calc(30 / 22);
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: calc(32 / 24);
+  }
+}
+
+.c-card03__br {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.c-card03__text {
+  font-size: rem(16);
+  line-height: calc(25 / 16);
+  letter-spacing: -0.04em;
+  margin-top: rem(11);
+  @include mq(md) {
+    line-height: calc(26 / 16);
+    margin-top: rem(21);
+    max-width: rem(574);
+  }
+}
+
+.c-card03__image {
+  position: relative;
+  z-index: 2;
+  width: rem(325);
+  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.1);
+  @include mq(md) {
+    width: rem(359);
+  }
+}
+
+.c-card03__image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 325/230;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 359/253;
+  }
+}
+
+.p-card03 {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  @include mq(md) {
+    gap: rem(59);
+  }
+}
+
+// 奇数番目のカード
+.p-card03 .c-card03:nth-child(odd) .c-card03__contents {
+  margin-right: rem(15);
+  padding: rem(24) rem(15) rem(131) 0;
+  @include mq(md) {
+    max-width: rem(814);
+    padding: rem(32) rem(15) rem(28) rem(42);
+  }
+}
+
+.p-card03 .c-card03:nth-child(odd) .c-card03__contents::before {
+  margin-left: calc(50% - 50vw);
+  right: 0;
+}
+
+.p-card03 .c-card03:nth-child(odd) .c-card03__text {
+  margin-right: rem(6);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: rem(5);
+  }
+}
+
+.p-card03 .c-card03:nth-child(odd) .c-card03__image {
+  margin: rem(-103) 0 0 auto;
+  @include mq(md) {
+    margin: rem(-203) 0 0 auto;
+    right: rem(-15);
+  }
+}
+
+// 偶数番目のカード
+.p-card03 .c-card03:nth-child(even) .c-card03__contents {
+  margin-left: rem(20);
+  padding: rem(24) 0 rem(131) rem(15);
+  @include mq(md) {
+    max-width: rem(800);
+    margin-left: auto;
+    padding: rem(32) rem(15) rem(28) rem(42);
+    left: rem(15);
+  }
+}
+
+.p-card03 .c-card03:nth-child(even) .c-card03__head {
+  max-width: rem(574);
+  margin-left: auto;
+}
+
+.p-card03 .c-card03:nth-child(even) .c-card03__contents::before {
+  margin-right: calc(50% - 50vw);
+  left: 0;
+}
+
+.p-card03 .c-card03:nth-child(even) .c-card03__text {
+  @include mq(md) {
+    margin-left: auto;
+  }
+}
+
+.p-card03 .c-card03:nth-child(even) .c-card03__image {
+  margin: rem(-103) auto 0 0;
+  @include mq(md) {
+    margin: rem(-208) auto 0 0;
+    left: rem(15);
+  }
+}

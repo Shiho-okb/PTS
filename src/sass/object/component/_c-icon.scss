@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .c-icon {
-  width: 100%;
+  width: rem(100);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: $blue;
@@ -30,7 +30,7 @@
   color: $white;
   text-align: center;
   font-size: calc(13 / 375 * 100vw);
-  font-weight: 600;
+  font-weight: 700;
   line-height: calc(17 / 13);
   letter-spacing: .037em;
   @include mq(md) {

@@ -37,7 +37,9 @@
   align-items: center;
   text-align: center;
   font-size: rem(18);
-  font-weight: 600;
+  letter-spacing: 0;
+  line-height: calc(25 / 18);
+  font-weight: 700;
   @include mq(md) {
     line-height: 1.7;
     letter-spacing: .037em;

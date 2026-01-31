@@ -14,10 +14,11 @@
 
 .c-title::before {
   content: attr(data-en);
+  font-family: $font-sub;
   font-size: rem(12);
   line-height: 1;
-  letter-spacing: .037em;
-  font-weight: 400;
+  letter-spacing: .075em;
+  font-weight: 700;
   color: $blue;
   @include mq(md) {
     font-size: rem(20);
