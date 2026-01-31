@@ -12,7 +12,7 @@
   color: $white;
   background-color: $orange;
   border-radius: rem(40);
-  border: 1.5px solid $white;
+  border: rem(1.5) solid $white;
   transition: all .3s;
   @include mq(md) {
     display: none;

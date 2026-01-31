@@ -17,12 +17,12 @@
   width: 94%;
   height: 94%;
   border-radius: 50%;
-  border: 1px solid $white;
+  border: rem(1) solid $white;
   display: flex;
   align-items: center;
   justify-content: center;
   @include mq(md) {
-    border: 2px solid $white;
+    border: rem(2) solid $white;
   }
 }
 
