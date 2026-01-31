@@ -138,14 +138,16 @@
   @include mq(md) {
     max-width: rem(800);
     margin-left: auto;
-    padding: rem(32) rem(15) rem(28) rem(42);
+    padding: rem(32) rem(15) rem(28) 0;
     left: rem(15);
   }
 }
 
 .p-card03 .c-card03:nth-child(even) .c-card03__head {
-  max-width: rem(574);
-  margin-left: auto;
+  @include mq(md) {
+    max-width: rem(574);
+    margin-left: rem(189);
+  }
 }
 
 .p-card03 .c-card03:nth-child(even) .c-card03__contents::before {
@@ -155,7 +157,7 @@
 
 .p-card03 .c-card03:nth-child(even) .c-card03__text {
   @include mq(md) {
-    margin-left: auto;
+    margin-left: rem(189);
   }
 }
 
@@ -165,4 +167,8 @@
     margin: rem(-208) auto 0 0;
     left: rem(15);
   }
+}
+
+.section-card03 {
+  overflow: hidden;
 }
