@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.c-btn04 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-block: rem(7.5) rem(11);
+  font-size: rem(11);
+  font-weight: 700;
+  letter-spacing: .037em;
+  line-height: 1;
+  color: $white;
+  background-color: $orange;
+  border-radius: rem(5);
+  border: rem(1.5) solid $white;
+  transition: all .3s;
+  gap: rem(5);
+  @include mq(md) {
+    padding-block: rem(25);
+    font-size: rem(20);
+    border-radius: rem(10);
+    border: rem(3) solid $white;
+    gap: rem(9);
+  }
+}
+
+.c-btn04__image {
+  width: rem(44);
+  margin: 0 auto;
+  @include mq(md) {
+    width: rem(80);
+  }
+}
+
+.c-btn04__image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 44 / 44;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 80 / 81;
+  }
+}
+
+.c-btn04 span {
+  position: absolute;
+  right: rem(6);
+  bottom: rem(10);
+  width: rem(12);
+  height: rem(12);
+  border-radius: 50%;
+  background: $white;
+  @include mq(md) {
+    right: rem(20);
+    bottom: rem(25);
+    width: rem(22);
+    height: rem(22);
+  }
+}
+
+.c-btn04 span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(2.5) 0 rem(2.5) rem(5);
+  border-color: transparent transparent transparent $orange;
+  transform: translate(-50%, -50%);
+  @include mq(md) {
+    border-width: rem(5) 0 rem(5) rem(10);
+  }
+}
+
+.c-btn__text {
+  padding-left: rem(10);
+  @include mq(md) {
+    padding-left: rem(28);
+  }
+}
+
+.p-btn04 {
+  width: rem(100);
+  @include mq(md) {
+    width: rem(206);
+  }
+}
