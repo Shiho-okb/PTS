@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.c-btn03 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: rem(12) rem(12) rem(11) rem(18);
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 1;
+  color: $white;
+  background-color: $orange;
+  border-radius: rem(40);
+  border: 1.5px solid $white;
+  transition: all .3s;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.c-btn03 span {
+  position: absolute;
+  right: rem(14);
+  width: rem(15);
+  height: rem(15);
+  border-radius: 50%;
+  background: $white;
+}
+
+.c-btn03 span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(4) 0 rem(4) rem(7);
+  border-color: transparent transparent transparent $orange;
+  transform: translate(-50%, -50%);
+}
+
+.p-btn03 {
+  width: rem(140);
+}
