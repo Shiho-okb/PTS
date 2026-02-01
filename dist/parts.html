@@ -29,7 +29,7 @@
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.min.css">
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script defer src="./js/script.min.js"></script>
 </head>
 <body>
@@ -50,7 +50,7 @@
           <div class="p-header__nav-wrapper">
             <ul class="p-header__nav-list">
               <li class="p-header__nav-item p-header-nav-item">
-                <div class="p-header-nav-item__accordion js-accordion">
+                <div class="p-header-nav-item__accordion p-header-nav-item__accordion--main js-accordion">
                   <span class="p-header-nav-item__link">開催予定のセミナー</span>
                   <span class="p-header-nav-item__toggle"></span>
                 </div>
@@ -59,36 +59,45 @@
                     <a href="#" class="p-header-dropmenu__link">
                       <span>不動産セミナー</span>
                     </a>
+                    <span class="p-header-dropmenu__toggle js-accordion"></span>
                   </li>
                   <li class="p-header-dropmenu__item">
                     <a href="#" class="p-header-dropmenu__link">
                       <span>投資信託セミナー</span>
                     </a>
+                    <span class="p-header-dropmenu__toggle js-accordion"></span>
                   </li>
                   <li class="p-header-dropmenu__item">
                     <a href="#" class="p-header-dropmenu__link">
                       <span>仮想通貨セミナー</span>
                     </a>
+                    <span class="p-header-dropmenu__toggle js-accordion"></span>
                   </li>
                 </ul>
               </li>
               <li class="p-header__nav-item p-header-nav-item">
-                <a href="#" class="p-header-nav-item__link">資産運用コラム</a>
+                <div class="p-header-nav-item__accordion js-accordion">
+                  <a href="#" class="p-header-nav-item__link">資産運用コラム</a>
+                  <span class="p-header-nav-item__toggle"></span>
+                </div>
               </li>
               <li class="p-header__nav-item p-header-nav-item">
-                <a href="#" class="p-header-nav-item__link">アーカイブ動画</a>
+                <div class="p-header-nav-item__accordion js-accordion">
+                  <a href="#" class="p-header-nav-item__link">アーカイブ動画</a>
+                  <span class="p-header-nav-item__toggle"></span>
+                </div>
               </li>
-            </ul>
-            <ul class="p-header__btnlist">
-              <li class="p-header__btnitem p-header__btnitem--reservation">
+              <!-- <li class="p-header__btnitem p-header__btnitem--reservation">
                 <a href="#">
                   <div class="p-header__btnitem--reservation__img">
                     <img src="./images/header/icon_01.png" alt="カレンダーのロゴ" width="31" height="32">
                   </div>
                   お問い合わせ
                 </a>
-              </li>
+              </li> -->
             </ul>
+            <!-- <ul class="p-header__btnlist">
+            </ul> -->
           </div>
         </nav>
       </div>

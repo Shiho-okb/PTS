@@ -27,7 +27,7 @@
 
 .p-header__inner {
   position: relative;
-  z-index: 1;
+  z-index: 100;
   padding-left: rem(15);
   @include mq(md) {
     // height: 100%;
@@ -51,7 +51,7 @@
   color: $white;
   height: inherit;
   position: relative;
-  z-index: 44;
+  z-index: 300;
   @include mq(md) {
     // font-size: calc(28 / 1400 * 100vw);
     // margin-left: auto;
@@ -73,7 +73,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  z-index: 44;
+  z-index: 300;
   @include mq(md) {
     // display: none;
   }
@@ -103,13 +103,13 @@
 .p-header__nav {
   display: none;
   position: fixed;
-  height: 100vh;
+  height: calc(100vh - rem(55));
   width: 100%;
   background-color: $white;
-  top: 0;
+  top: rem(55);
   left: 0;
-  z-index: 43;
-  padding-block: rem(98) rem(20);
+  z-index: 200;
+  // padding-block: rem(20);
   @include mq(md) {
     // display: flex;
     // position: static;
@@ -123,7 +123,7 @@
 }
 
 .p-header__nav-wrapper {
-  padding-inline: rem(30);
+  padding-inline: rem(15);
   height: 100%;
   min-height: 100vh;
   overflow: auto;
@@ -145,8 +145,7 @@
 
 .p-header__nav-list {
   width: 100%;
-  margin-top: rem(19);
-  order: 2;
+  margin-top: rem(12);
   @include mq(md) {
     // order: initial;
     // display: flex;
@@ -158,8 +157,8 @@
 }
 
 .p-header__nav-item {
-  border-bottom: 1px solid rgba($blue, 0.4);
   width: 100%;
+  // border-bottom: rem(1.5) solid $blue02;
   @include mq(md) {
     // border-bottom: none;
     // height: inherit;
@@ -169,6 +168,10 @@
     // transition: .4s;
     // width: auto;
   }
+}
+
+.p-header__nav-item:first-child {
+  border-bottom: none;
 }
 
 .p-header__nav-item:not(:first-child)::before {
@@ -181,16 +184,14 @@
   }
 }
 
-.p-header__nav-item:last-child {
-  border-bottom: none;
-}
-
 .p-header-nav-item__link {
   display: block;
-  padding: rem(11) 0 rem(13) rem(10);
+  padding: rem(34.5) 0 rem(10.5);
   font-size: rem(18);
-  line-height: calc(26 / 18);
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .1em;
+  color: $blue02;
   @include mq(md) {
     // font-size: calc(16 / 1400 * 100vw);
     // line-height: calc(16 / 16);
@@ -218,7 +219,7 @@
 .p-header-nav-item__accordion {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba($blue, 0.4);
+  border-bottom: rem(1.5) solid $blue02;
   @include mq(md) {
     // border-bottom: none;
     // height: inherit;
@@ -231,27 +232,48 @@
 
 .p-header-nav-item__toggle {
   position: relative;
+  right: 0;
+  top: rem(34.5);
+  width: rem(20);
+  height: rem(20);
+  border-radius: 50%;
+  background: $blue02;
   @include mq(md) {
     // display: none;
   }
 }
 
-.p-header-nav-item__toggle::after {
+.p-header-nav-item__toggle::before {
   content: "";
-  display: block;
   position: absolute;
-  border-right: solid 2px $blue;
-  border-top: solid 2px $blue;
-  height: rem(13);
-  width: rem(13);
-  right: rem(12);
-  top: 45%;
-  transform: translateY(-50%) rotate(135deg);
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(5) 0 rem(5) rem(7);
+  border-color: transparent transparent transparent $white;
+  transform: translate(-50%, -50%);
   transition: transform .3s;
 }
 
-.p-header-nav-item__accordion.open .p-header-nav-item__toggle::after {
-  transform: translateY(0) rotate(-45deg);
+
+// .p-header-nav-item__toggle::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   border-right: solid 2px $blue;
+//   border-top: solid 2px $blue;
+//   height: rem(13);
+//   width: rem(13);
+//   right: rem(12);
+//   top: 45%;
+//   transform: translateY(-50%) rotate(135deg);
+//   transition: transform .3s;
+// }
+
+.p-header-nav-item__accordion--main.open .p-header-nav-item__toggle::before {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 
@@ -261,40 +283,47 @@
 .p-header__dropmenu {
   display: none;
   @include mq(md) {
-    transform: scaleY(0);
-    transform-origin: top center;
-    transition: .4s;
-    background: rgb(255, 255, 255, .8);
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    padding-inline: rem(15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0 0 rem(10) rem(10);
+    // transform: scaleY(0);
+    // transform-origin: top center;
+    // transition: .4s;
+    // background: rgb(255, 255, 255, .8);
+    // position: absolute;
+    // top: 100%;
+    // width: 100%;
+    // padding-inline: rem(15);
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // border-radius: 0 0 rem(10) rem(10);
   }
 }
 
 .p-header-dropmenu__item {
   position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p-header-dropmenu__item:first-child {
+  margin-top: rem(15);
 }
 
 .p-header-dropmenu__item:not(:last-child) {
   @include mq(md) {
-    border-bottom: 1px solid rgba(72, 72, 72, 0.3);
+    // border-bottom: 1px solid rgba(72, 72, 72, 0.3);
   }
 }
 
 .p-header-dropmenu__link {
   display: flex;
   align-items: center;
-  gap: rem(10);
-  padding: rem(12) 0 rem(12) rem(20);
+  // gap: rem(10);
+  padding: 0 0 0 rem(20);
   font-size: rem(15);
-  line-height: calc(21 / 15);
-  letter-spacing: 0.04em;
+  line-height: calc(50 / 15);
+  letter-spacing: .1em;
   @include mq(md) {
     // font-size: calc(16 / 1400 * 100vw);
     // line-height: calc(24 / 16);
@@ -310,11 +339,11 @@
 }
 
 .p-header-dropmenu__link::before {
-  content: "";
-  display: block;
-  width: rem(16);
-  height: 1px;
-  background-color: $blue;
+  // content: "";
+  // display: block;
+  // width: rem(16);
+  // height: 1px;
+  // background-color: $blue;
   @include mq(md) {
     // display: none;
   }
@@ -331,6 +360,27 @@
 .p-header-nav-item:hover .p-header__dropmenu {
   @include mq(md) {
     // transform: scaleY(1);
+  }
+}
+
+.p-header-dropmenu__toggle {
+  position: relative;
+  width: rem(24);
+  height: rem(24);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.p-header-dropmenu__toggle::after {
+  content: "＞";
+  position: absolute;
+  top: 0;
+  right: rem(15);
+  font-size: rem(14);
+  transition: transform .3s;
+  @include mq(md) {
+    // height: myrem(6);
+    // width: myrem(6);
   }
 }
 
