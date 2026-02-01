@@ -1,0 +1,425 @@
+@use "global" as *;
+
+.p-header {
+  position: relative;
+  height: rem(55);
+  // background: $white;
+  @include mq(md) {
+    // height: rem(80);
+    // transition: .4s;
+  }
+  @include mq(xl) {
+    // height: calc(80 / 1400 * 100vw);
+  }
+}
+
+.p-header::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/header/header_01.png) no-repeat center center / cover;
+  z-index: 0;
+}
+
+.p-header__inner {
+  position: relative;
+  z-index: 1;
+  padding-left: rem(15);
+  @include mq(md) {
+    // height: 100%;
+    // padding-left: 0;
+  }
+}
+
+.p-header__wrapper {
+  height: rem(55);
+  display: flex;
+  justify-content: space-between;
+  @include mq(md) {
+    // height: 100%;
+    // align-items: center;
+  }
+}
+
+.p-header__logo {
+  font-size: rem(18);
+  font-weight: 700;
+  color: $white;
+  height: inherit;
+  position: relative;
+  z-index: 44;
+  @include mq(md) {
+    // font-size: calc(28 / 1400 * 100vw);
+    // margin-left: auto;
+    // transition: .4s;
+  }
+}
+
+.p-header__logo a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.p-header__hamburger {
+  height: rem(55);
+  width: rem(57);
+  padding: rem(20.5) rem(15) rem(23.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 44;
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header__hamburger span {
+  width: 100%;
+  height: rem(1.5);
+  background-color: $blue02;
+  display: inline-block;
+  transform: translateY(0) rotate(0);
+  transition: transform ease-in-out .3s;
+}
+
+.p-header__hamburger.is-active span:nth-child(1) {
+  transform: translateY(rem(5)) rotate(45deg);
+}
+
+.p-header__hamburger.is-active span:nth-child(2) {
+  transform: translateY(rem(-5)) rotate(-45deg);
+}
+
+
+/*-------------------------------------------
+ナビゲーション
+-------------------------------------------*/
+.p-header__nav {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: $white;
+  top: 0;
+  left: 0;
+  z-index: 43;
+  padding-block: rem(98) rem(20);
+  @include mq(md) {
+    // display: flex;
+    // position: static;
+    // height: inherit;
+    // width: calc(965 / 1400 * 100vw);
+    // padding: 0;
+    // align-items: center;
+    // background-color: transparent;
+    // justify-content: flex-end;
+  }
+}
+
+.p-header__nav-wrapper {
+  padding-inline: rem(30);
+  height: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: rem(600);
+  margin: 0 auto;
+  @include mq(md) {
+    // width: 100%;
+    // padding: 0;
+    // height: inherit;
+    // min-height: initial;
+    // overflow: initial;
+    // flex-direction: row;
+    // max-width: 100%;
+  }
+}
+
+.p-header__nav-list {
+  width: 100%;
+  margin-top: rem(19);
+  order: 2;
+  @include mq(md) {
+    // order: initial;
+    // display: flex;
+    // width: calc(583 / 965 * 100vw);
+    // height: inherit;
+    // justify-content: flex-end;
+    // margin-top: initial;
+  }
+}
+
+.p-header__nav-item {
+  border-bottom: 1px solid rgba($blue, 0.4);
+  width: 100%;
+  @include mq(md) {
+    // border-bottom: none;
+    // height: inherit;
+    // position: relative;
+    // display: flex;
+    // align-items: center;
+    // transition: .4s;
+    // width: auto;
+  }
+}
+
+.p-header__nav-item:not(:first-child)::before {
+  @include mq(md) {
+    // content: "";
+    // position: absolute;
+    // width: 1px;
+    // height: rem(16);
+    // background: $black;
+  }
+}
+
+.p-header__nav-item:last-child {
+  border-bottom: none;
+}
+
+.p-header-nav-item__link {
+  display: block;
+  padding: rem(11) 0 rem(13) rem(10);
+  font-size: rem(18);
+  line-height: calc(26 / 18);
+  letter-spacing: 0.04em;
+  @include mq(md) {
+    // font-size: calc(16 / 1400 * 100vw);
+    // line-height: calc(16 / 16);
+    // letter-spacing: 0.1em;
+    // height: inherit;
+    // display: flex;
+    // align-items: center;
+    // padding: myrem(28) calc(26 / 1400 * 100vw);
+    // transition: .4s;
+  }
+}
+
+.p-header-nav-item__link:hover {
+  @include mq(md) {
+    // color: $green;
+    // font-weight: bold;
+    // opacity: 1;
+  }
+}
+
+
+/*-------------------------------------------
+アコーディオン
+-------------------------------------------*/
+.p-header-nav-item__accordion {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba($blue, 0.4);
+  @include mq(md) {
+    // border-bottom: none;
+    // height: inherit;
+  }
+}
+
+.p-header-nav-item__accordion .p-header-nav-item__link {
+  width: 100%;
+}
+
+.p-header-nav-item__toggle {
+  position: relative;
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header-nav-item__toggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-right: solid 2px $blue;
+  border-top: solid 2px $blue;
+  height: rem(13);
+  width: rem(13);
+  right: rem(12);
+  top: 45%;
+  transform: translateY(-50%) rotate(135deg);
+  transition: transform .3s;
+}
+
+.p-header-nav-item__accordion.open .p-header-nav-item__toggle::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+
+/*-------------------------------------------
+ドロップメニュー
+-------------------------------------------*/
+.p-header__dropmenu {
+  display: none;
+  @include mq(md) {
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: .4s;
+    background: rgb(255, 255, 255, .8);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding-inline: rem(15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 0 rem(10) rem(10);
+  }
+}
+
+.p-header-dropmenu__item {
+  position: relative;
+  width: 100%;
+}
+
+.p-header-dropmenu__item:not(:last-child) {
+  @include mq(md) {
+    border-bottom: 1px solid rgba(72, 72, 72, 0.3);
+  }
+}
+
+.p-header-dropmenu__link {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  padding: rem(12) 0 rem(12) rem(20);
+  font-size: rem(15);
+  line-height: calc(21 / 15);
+  letter-spacing: 0.04em;
+  @include mq(md) {
+    // font-size: calc(16 / 1400 * 100vw);
+    // line-height: calc(24 / 16);
+    // letter-spacing: .1em;
+    // padding-inline: 0;
+    // padding-block: rem(15);
+    // transition: .4s;
+    // width: inherit;
+    // justify-content: center;
+    // width: 100%;
+    // box-sizing: border-box;
+  }
+}
+
+.p-header-dropmenu__link::before {
+  content: "";
+  display: block;
+  width: rem(16);
+  height: 1px;
+  background-color: $blue;
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header-dropmenu__link:hover {
+  @include mq(md) {
+    // color: $green;
+    // font-weight: bold;
+    // opacity: 1;
+  }
+}
+
+.p-header-nav-item:hover .p-header__dropmenu {
+  @include mq(md) {
+    // transform: scaleY(1);
+  }
+}
+
+.p-header__btnlist {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  width: 100%;
+  @include mq(md) {
+    // width: calc(382 / 965 * 100vw);
+    // flex-direction: row;
+    // height: inherit;
+    // gap: initial;
+    // height: 100%;
+  }
+}
+
+.p-header__btnitem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(10);
+  transition: all .3s;
+  @include mq(md) {
+    // height: inherit;
+    // border-radius: 0;
+  }
+}
+
+
+/*-------------------------------------------
+Web予約ボタン
+-------------------------------------------*/
+.p-header__btnitem--reservation {
+  color: $white;
+  background: $blue;
+  order: 1;
+  @include mq(md) {
+    // background: $green;
+    // height: inherit;
+    // width: calc(120 / 382 * 100%);
+    // order: 2;
+  }
+}
+
+.p-header__btnitem--reservation:hover {
+  @include mq(md) {
+    // opacity: 0.6;
+    // cursor: pointer;
+  }
+}
+
+.p-header__btnitem--reservation a {
+  display: flex;
+  align-items: center;
+  font-size: rem(22);
+  font-weight: 500;
+  line-height: calc(32 / 22);
+  letter-spacing: .1em;
+  gap: rem(19.5);
+  padding: rem(19) rem(87) rem(19) rem(76);
+  @include mq(md) {
+    // font-size: calc(18 / 1400 * 100vw);
+    // font-weight: 700;
+    // line-height: calc(18 / 18);
+    // padding: rem(28) calc(16 / 1400 * 100vw) rem(28) calc(18 / 1400 * 100vw);
+    // align-items: center;
+    // height: inherit;
+  }
+}
+
+.p-header__btnitem--reservation__img {
+  width: myrem(31);
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header__btnitem--reservation__img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 31/32;
+}
+
+
+/*-------------------------------------------
+ハンバーガーメニュー展開時、背景を固定
+-------------------------------------------*/
+body.active {
+  height: 100%;
+  overflow: hidden;
+}
