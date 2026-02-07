@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .p-header {
-  position: relative;
   height: rem(55);
   @include mq(md) {
     height: rem(70);
