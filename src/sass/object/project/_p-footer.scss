@@ -1,0 +1,210 @@
+@use "global" as *;
+
+.p-footer {
+  padding-block: rem(130) rem(40);
+  @include mq(md) {
+    // padding-block: rem(70) rem(37);
+    // transition: .4s;
+  }
+}
+
+.p-footer__inner {
+  max-width: rem(600);
+  @include mq(md) {
+    // max-width: $innerWidth + $padding-pc * 2;
+  }
+}
+
+.p-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    // flex-direction: row;
+    // align-items: flex-start;
+    // gap: calc(125 / 1400 * 100vw);
+    // justify-content: center;
+  }
+}
+
+// .p-footer__wrapper {
+//   @include mq(xl) {
+//     gap: rem(125);
+//   }
+// }
+
+.p-footer__logo {
+  font-size: rem(27.5);
+  line-height: 1;
+  letter-spacing: .06em;
+  font-weight: 700;
+  color: $blue02;
+  @include mq(md) {
+    // font-size: rem(19);
+    // line-height: calc(29 / 19);
+    // margin-top: rem(10);
+    // white-space: nowrap;
+  }
+}
+
+
+/*-------------------------------------------
+ナビゲーション
+-------------------------------------------*/
+.p-footer__nav {
+  width: 100%;
+  margin-top: rem(16);
+  @include mq(md) {
+    // width: auto;
+    // margin-top: 0;
+  }
+}
+
+.p-footer-nav-item__accordion--main.open .p-footer-nav-item__toggle::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.p-footer-nav-item__toggle {
+  position: relative;
+  right: 0;
+  top: rem(34.5);
+  width: rem(20);
+  height: rem(20);
+  border-radius: 50%;
+  background: $blue02;
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-footer-nav-item__toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(5) 0 rem(5) rem(7);
+  border-color: transparent transparent transparent $white;
+  transform: translate(-50%, -50%);
+  transition: transform .3s;
+}
+
+.p-footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    // flex-direction: row;
+    // gap: calc(34 / 1400 * 100vw);
+    // flex-wrap: nowrap;
+  }
+}
+
+.p-footer__nav-list {
+  @include mq(xl) {
+    // gap: rem(34);
+  }
+}
+
+.p-footer__nav-list>li:last-child>a {
+  @include mq(md) {
+    // padding-block: rem(10) rem(5);
+  }
+}
+
+.p-footer-nav-item__link {
+  display: block;
+  padding-block: rem(34.5) rem(11);
+  font-size: rem(18);
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1;
+  color: $blue02;
+  width: 100%;
+  @include mq(md) {
+    // padding-block: rem(10) rem(5);
+    // letter-spacing: 0.1em;
+    // transition: .4s;
+    // white-space: nowrap;
+  }
+}
+
+
+/*-------------------------------------------
+アコーディオン
+-------------------------------------------*/
+.p-footer-nav-item__accordion {
+  display: flex;
+  border-bottom: rem(1) solid $blue02;
+}
+
+.p-footer-nav-item__accordion .p-header-nav-item__link {
+  width: 100%;
+}
+
+
+/*-------------------------------------------
+ドロップメニュー
+-------------------------------------------*/
+.p-footer__dropmenu {
+  display: none;
+  padding-inline: rem(20) rem(15);
+  @include mq(md) {
+    // padding: rem(7) rem(4) 0 rem(4);
+  }
+}
+
+.p-footer-dropmenu__item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq(md) {
+    // border-bottom: none;
+  }
+}
+
+.p-footer-dropmenu__link {
+  width: 100%;
+  align-items: center;
+  font-size: rem(16);
+  letter-spacing: .05em;
+  line-height: calc(49 / 16);
+  padding-top: rem(6);
+  @include mq(md) {
+    // padding-block: rem(4) rem(4);
+  }
+}
+
+.p-footer-dropmenu__toggle {
+  position: relative;
+  width: rem(12);
+  height: rem(16);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.p-footer-dropmenu__toggle::after {
+  content: "＞";
+  position: absolute;
+  top: 0;
+  font-size: rem(14);
+  transition: transform .3s;
+  @include mq(md) {
+    // height: rem(6);
+    // width: rem(6);
+  }
+}
+
+.p-footer__copyright {
+  margin-top: rem(31.5);
+  font-size: rem(11);
+  letter-spacing: 0.07em;
+  display: block;
+  text-align: center;
+  @include mq(md) {
+    // margin-top: rem(70);
+    // letter-spacing: 0.1em;
+  }
+}

@@ -65,11 +65,20 @@ jQuery(function ($) {
 
   /* ===== アコーディオン ===== */
   $(function () {
+    // ヘッダーアコーディオン
     $(".js-accordion").on("click", function () {
       const $target = $(this).closest(".p-header-nav-item").find(".p-header-dropmenu");
       $target.stop(true, true).slideToggle(300).toggleClass("is-open");
       $(this).toggleClass("open");
     });
+
+    // フッターアコーディオン
+    $(".js-footer-accordion").on("click", function () {
+      const $target = $(this).closest(".p-footer-nav-item").find(".p-footer-dropmenu");
+      $target.stop(true, true).slideToggle(300).toggleClass("is-open");
+      $(this).toggleClass("open");
+    });
   });
+
 
 });
