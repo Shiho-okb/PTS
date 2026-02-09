@@ -3,15 +3,15 @@
 .p-footer {
   padding-block: rem(130) rem(40);
   @include mq(md) {
-    // padding-block: rem(70) rem(37);
-    // transition: .4s;
+    padding-block: rem(88) rem(19);
+    transition: .4s;
   }
 }
 
 .p-footer__inner {
   max-width: rem(600);
   @include mq(md) {
-    // max-width: $innerWidth + $padding-pc * 2;
+    max-width: $innerWidth + $padding-pc * 2;
   }
 }
 
@@ -19,18 +19,11 @@
   display: flex;
   flex-direction: column;
   @include mq(md) {
-    // flex-direction: row;
-    // align-items: flex-start;
-    // gap: calc(125 / 1400 * 100vw);
-    // justify-content: center;
+    flex-direction: row;
+    gap: calc(125 / 1400 * 100vw);
+    align-items: flex-start;
   }
 }
-
-// .p-footer__wrapper {
-//   @include mq(xl) {
-//     gap: rem(125);
-//   }
-// }
 
 .p-footer__logo {
   font-size: rem(27.5);
@@ -39,10 +32,8 @@
   font-weight: 700;
   color: $blue02;
   @include mq(md) {
-    // font-size: rem(19);
-    // line-height: calc(29 / 19);
-    // margin-top: rem(10);
-    // white-space: nowrap;
+    font-size: rem(34);
+    white-space: nowrap;
   }
 }
 
@@ -54,8 +45,8 @@
   width: 100%;
   margin-top: rem(16);
   @include mq(md) {
-    // width: auto;
-    // margin-top: 0;
+    width: auto;
+    margin-top: 0;
   }
 }
 
@@ -72,7 +63,8 @@
   border-radius: 50%;
   background: $blue02;
   @include mq(md) {
-    // display: none;
+    flex-shrink: 0;
+    top: rem(12);
   }
 }
 
@@ -94,21 +86,10 @@
   display: flex;
   flex-direction: column;
   @include mq(md) {
-    // flex-direction: row;
-    // gap: calc(34 / 1400 * 100vw);
-    // flex-wrap: nowrap;
-  }
-}
-
-.p-footer__nav-list {
-  @include mq(xl) {
-    // gap: rem(34);
-  }
-}
-
-.p-footer__nav-list>li:last-child>a {
-  @include mq(md) {
-    // padding-block: rem(10) rem(5);
+    flex-direction: row;
+    gap: calc(35 / 1440 * 100vw);
+    flex-wrap: nowrap;
+    margin-left: rem(-5);
   }
 }
 
@@ -122,10 +103,11 @@
   color: $blue02;
   width: 100%;
   @include mq(md) {
-    // padding-block: rem(10) rem(5);
-    // letter-spacing: 0.1em;
-    // transition: .4s;
-    // white-space: nowrap;
+    width: auto;
+    flex: 1;
+    white-space: nowrap;
+    padding-block: rem(12) rem(8);
+    transition: .4s;
   }
 }
 
@@ -136,6 +118,16 @@
 .p-footer-nav-item__accordion {
   display: flex;
   border-bottom: rem(1) solid $blue02;
+  @include mq(md) {
+    gap: rem(7);
+  }
+}
+
+.p-footer-nav-item__accordion:hover {
+  @include mq(md) {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 
 .p-footer-nav-item__accordion .p-header-nav-item__link {
@@ -150,7 +142,8 @@
   display: none;
   padding-inline: rem(20) rem(15);
   @include mq(md) {
-    // padding: rem(7) rem(4) 0 rem(4);
+    display: block;
+    padding: rem(4) rem(7) 0 0;
   }
 }
 
@@ -160,9 +153,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include mq(md) {
-    // border-bottom: none;
-  }
 }
 
 .p-footer-dropmenu__link {
@@ -170,10 +160,12 @@
   align-items: center;
   font-size: rem(16);
   letter-spacing: .05em;
+  padding-top: rem(6);
   line-height: calc(49 / 16);
   padding-top: rem(6);
   @include mq(md) {
-    // padding-block: rem(4) rem(4);
+    padding-top: 0;
+    line-height: calc(43 / 16);
   }
 }
 
@@ -183,6 +175,9 @@
   height: rem(16);
   flex-shrink: 0;
   cursor: pointer;
+  @include mq(md) {
+    height: rem(22);
+  }
 }
 
 .p-footer-dropmenu__toggle::after {
@@ -191,10 +186,6 @@
   top: 0;
   font-size: rem(14);
   transition: transform .3s;
-  @include mq(md) {
-    // height: rem(6);
-    // width: rem(6);
-  }
 }
 
 /*-------------------------------------------
@@ -206,12 +197,22 @@
   justify-content: center;
   gap: rem(23);
   margin-top: rem(59);
+  @include mq(md) {
+    gap: rem(25);
+    margin-top: rem(57);
+    margin-left: rem(32);
+  }
 }
 
 .p-footer__privacy-item {
   font-size: rem(14);
   letter-spacing: 0;
   line-height: calc(25 / 14);
+  @include mq(md) {
+    font-size: rem(16);
+    letter-spacing: .02em;
+    line-height: calc(36 / 16);
+  }
 }
 
 .p-footer__privacy-border {
@@ -223,11 +224,12 @@
 .p-footer__copyright {
   margin-top: rem(21);
   font-size: rem(11);
-  letter-spacing: 0.07em;
+  letter-spacing: .07em;
   display: block;
   text-align: center;
   @include mq(md) {
-    // margin-top: rem(70);
-    // letter-spacing: 0.1em;
+    margin-top: rem(60);
+    font-size: rem(12);
+    margin-left: rem(32);
   }
 }
