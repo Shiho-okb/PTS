@@ -33,13 +33,197 @@
   <script defer src="./js/script.min.js"></script>
 </head>
 <body>
-  <div class="l-inner">
-    <p class="p-test">サイトが表示されました!</p>
+  <!-- ヘッダー -->
+  <header class="p-header l-header js-header">
+    <div class="p-header__inner">
+      <div class="p-header__wrapper">
+        <h1 class="p-header__logo js-header">
+          <a href="./" class="p-header__logo-image js-header">
+            ASSIST seminar
+          </a>
+        </h1>
+        <button class="p-header__hamburger js-hamburger" aria-label="ハンバーガーボタン">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="p-header__nav js-drawer">
+          <div class="p-header__nav-wrapper">
+            <ul class="p-header__nav-list">
+              <li class="p-header__nav-item p-header-nav-item">
+                <div class="p-header-nav-item__accordion p-header-nav-item__accordion--main js-accordion">
+                  <span class="p-header-nav-item__link">開催予定のセミナー</span>
+                  <span class="p-header-nav-item__toggle"></span>
+                </div>
+                <ul class="p-header__dropmenu p-header-dropmenu">
+                  <li class="p-header-dropmenu__item">
+                    <a href="#" class="p-header-dropmenu__link">
+                      <span>不動産セミナー</span>
+                    </a>
+                    <span class="p-header-dropmenu__toggle js-accordion"></span>
+                  </li>
+                  <li class="p-header-dropmenu__item">
+                    <a href="#" class="p-header-dropmenu__link">
+                      <span>投資信託セミナー</span>
+                    </a>
+                    <span class="p-header-dropmenu__toggle js-accordion"></span>
+                  </li>
+                  <li class="p-header-dropmenu__item">
+                    <a href="#" class="p-header-dropmenu__link">
+                      <span>仮想通貨セミナー</span>
+                    </a>
+                    <span class="p-header-dropmenu__toggle js-accordion"></span>
+                  </li>
+                </ul>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <div class="p-header-nav-item__accordion js-accordion">
+                  <a href="#" class="p-header-nav-item__link">資産運用コラム</a>
+                  <span class="p-header-nav-item__toggle"></span>
+                </div>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <div class="p-header-nav-item__accordion js-accordion">
+                  <a href="#" class="p-header-nav-item__link">アーカイブ動画</a>
+                  <span class="p-header-nav-item__toggle"></span>
+                </div>
+              </li>
+            </ul>
+            <div class="p-header__btnitem p-header__contact">
+              <a href="#">
+                <div class="p-header__contact__img">
+                  <img src="./images/header/header_02PC.png" alt="手紙のロゴ" width="28" height="20">
+                </div>
+                お問い合わせ
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <div class="p-test__img">
-      <img src="./images/dummy1.webp" alt="サンプル画像" type="image/webp" width="3600" height="2400" loading="lazy" decoding="async">
+  <!-- メインエリア -->
+  <main>
+    <!-- 追従ボタン -->
+    <div class="p-follow">
+      <!-- ボタン① -->
+      <a href="#" class="c-btn03">
+        予約はこちら
+        <span></span>
+      </a>
     </div>
 
-  </div>
+    <!-- メインビジュアル -->
+    <div class="p-mainvisual l-mainvisual">
+      <div class="p-mainvisual__inner">
+        <picture class="p-mainvisual__image">
+          <source srcset="./images/mv/mv_03PC.webp" media="(min-width: 768px)" />
+          <img src="./images/mv/mv_03.png" alt="start upのロゴ" width="126" height="48">
+        </picture>
+        <div class="p-mainvisual__heading">
+          <span class="p-mainvisual__border"></span>
+          <h2 class="p-mainvisual__titlebox js-mainvisual__title">
+            <span class="p-mainvisual__subtitle">初心者からはじめる</span>
+            <span class="p-mainvisual__title">不動産投資セミナー</span>
+          </h2>
+        </div>
+        <div class="p-mainvisual__icon">
+          <div class="c-icon">
+            <div class="c-icon__contents">
+              <p class="c-icon__text">
+                物件数<br>業界<br>トップクラス
+              </p>
+            </div>
+          </div>
+          <!-- 初月から利益がでる -->
+          <div class="c-icon">
+            <div class="c-icon__contents">
+              <p class="c-icon__text">
+                初月から<br>利益がでる
+              </p>
+            </div>
+          </div>
+          <!-- 賃貸管理手数料永久無料 -->
+          <div class="c-icon">
+            <div class="c-icon__contents">
+              <p class="c-icon__text">
+                賃貸管理<br>手数料<br>永久無料
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-mainvisual__btn">
+          <a href="#" class="c-btn">
+            無料セミナー日程を確認する
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="p-footer l-footer js-footer">
+    <div class="p-footer__inner l-inner">
+      <div class="p-footer__wrapper">
+        <div class="p-footer__logo">
+          <a href="./">
+            ASSIST seminar
+          </a>
+        </div>
+        <nav class="p-footer__nav js-drawer">
+          <ul class="p-footer__nav-list">
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <div class="p-footer-nav-item__accordion p-footer-nav-item__accordion--main js-footer-accordion">
+                <span class="p-footer-nav-item__link">開催予定のセミナー</span>
+                <span class="p-footer-nav-item__toggle"></span>
+              </div>
+              <ul class="p-footer__dropmenu p-footer-dropmenu">
+                <li class="p-footer-dropmenu__item">
+                  <a href="#" class="p-footer-dropmenu__link">
+                    <span>不動産セミナー</span>
+                  </a>
+                  <span class="p-footer-dropmenu__toggle js-footer-accordion"></span>
+                </li>
+                <li class="p-footer-dropmenu__item">
+                  <a href="#" class="p-footer-dropmenu__link">
+                    <span>投資信託セミナー</span>
+                  </a>
+                  <span class="p-footer-dropmenu__toggle js-footer-accordion"></span>
+                </li>
+                <li class="p-footer-dropmenu__item">
+                  <a href="#" class="p-footer-dropmenu__link">
+                    <span>仮想通貨セミナー</span>
+                  </a>
+                  <span class="p-footer-dropmenu__toggle js-footer-accordion"></span>
+                </li>
+              </ul>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <div class="p-footer-nav-item__accordion js-footer-accordion">
+                <a href="#" class="p-footer-nav-item__link">資産運用コラム</a>
+                <span class="p-footer-nav-item__toggle"></span>
+              </div>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <div class="p-footer-nav-item__accordion js-footer-accordion">
+                <a href="#" class="p-footer-nav-item__link">アーカイブ動画</a>
+                <span class="p-footer-nav-item__toggle"></span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="p-footer__privacy">
+        <a href="#" class="p-footer__privacy-item">運営会社</a>
+        <span class="p-footer__privacy-border"></span>
+        <a href="https://www.google.co.jp/" class="p-footer__privacy-item" target="_blank" rel="noopener noreferrer">
+          プライバシーポリシー
+        </a>
+      </nav>
+      <small class="p-footer__copyright">©︎2024 ASSIST seminar</small>
+    </div>
+  </footer>
 </body>
 </html>

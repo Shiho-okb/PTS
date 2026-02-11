@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.p-mainvisual {
+  position: relative;
+  overflow: hidden;
+  // height: rem(511.5);
+}
+
+.p-mainvisual::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: rem(-27);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: url(../images/mv/mv_02.png) no-repeat center center / contain;
+  z-index: -1;
+  @include mq(md) {
+  }
+}
+
+.p-mainvisual__image {
+  position: absolute;
+  top: rem(134);
+  right: rem(9);
+}
+
+.p-mainvisual__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: rem(152);
+}
+
+.p-mainvisual__border {
+  display: block;
+  height: rem(32);
+  width: rem(1);
+  background-color: $blue;
+}
+
+.p-mainvisual__titlebox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-mainvisual__subtitle {
+  font-size: rem(19);
+  line-height: 1;
+  letter-spacing: .037em;
+  font-weight: 700;
+  color: $blue;
+  margin-top: rem(7);
+}
+
+.p-mainvisual__title {
+  font-size: rem(34);
+  line-height: 1;
+  letter-spacing: .037em;
+  font-weight: 700;
+  margin-top: rem(10);
+}
+
+.p-mainvisual__icon {
+  display: flex;
+  justify-content: center;
+  gap: rem(5);
+  max-width: rem(707);
+  margin: rem(22) rem(15) 0;
+  @include mq(md) {
+    gap: rem(29);
+    max-width: none;
+  }
+}
+
+.p-mainvisual__btn {
+  width: rem(240);
+  margin: rem(109) auto 0;
+  @include mq(md) {
+    width: rem(420);
+  }
+}

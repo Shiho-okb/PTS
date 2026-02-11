@@ -55,11 +55,3 @@
     border-width: rem(6) 0 rem(6) rem(10);
   }
 }
-
-.p-btn {
-  width: rem(240);
-  margin: 0 auto;
-  @include mq(md) {
-    width: rem(420);
-  }
-}
