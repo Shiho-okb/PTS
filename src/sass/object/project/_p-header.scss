@@ -115,7 +115,7 @@
     display: flex;
     position: static;
     height: inherit;
-    width: calc(875 / 1440 * 100vw);
+    width: calc((874 / 1440) * 100vw);
     padding: 0;
     align-items: center;
     background-color: transparent;
@@ -152,7 +152,7 @@
     margin-top: 0;
     display: flex;
     height: inherit;
-    width: calc(675 / 875 * 100vw);
+    width: calc(675 / 874 * 100vw);
     align-items: center;
     padding-inline: rem(3);
   }
@@ -193,6 +193,7 @@
     display: flex;
     align-items: center;
     padding: 0;
+    letter-spacing: .07em;
     height: 100%;
     font-size: calc(18 / 1440 * 100vw);
     color: $white;
@@ -376,7 +377,7 @@
       #174a7a 100%);
     color: $white;
     height: inherit;
-    width: calc(200 / 875 * 100vw);
+    width: calc(198 / 874 * 100vw);
     transition: all .3s;
   }
 }

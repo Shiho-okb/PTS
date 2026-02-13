@@ -3,6 +3,6 @@
 .l-mainvisual {
   margin-top: rem(55);
   @include mq(md) {
-    // margin-top: rem(80);
+    margin-top: calc(70 / 1440 * 100vw);
   }
 }

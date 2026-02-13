@@ -81,10 +81,3 @@
     padding-left: rem(28);
   }
 }
-
-.p-btn04 {
-  width: rem(100);
-  @include mq(md) {
-    width: rem(206);
-  }
-}
