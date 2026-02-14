@@ -12,6 +12,7 @@
   @include mq(md) {
     flex-direction: row;
     gap: rem(27);
+    margin-top: rem(27);
   }
 }
 
@@ -27,11 +28,28 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-top: rem(18);
+  @include mq(md) {
+    width: rem(731);
+    margin: rem(50) auto 0;
+  }
 }
 
 .p-learn__contents-img {
   width: rem(33);
   height: rem(74);
+  @include mq(md) {
+    width: rem(69);
+    height: rem(148);
+  }
+}
+
+.p-learn__contents-img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 33 / 74;
+  @include mq(md) {
+    aspect-ratio: 69 / 148;
+  }
 }
 
 .p-learn__contents-item {
@@ -41,11 +59,12 @@
   align-items: center;
   gap: rem(3);
   margin-bottom: rem(5);
-  font-size: rem(19);
-  letter-spacing: .075em;
   font-weight: 700;
   color: $blue;
   text-align: center;
+  @include mq(md) {
+    gap: rem(9);
+  }
 }
 
 .p-learn__contents-num {
@@ -54,21 +73,38 @@
   letter-spacing: rem(-1);
   font-style: italic;
   padding-right: rem(9);
+  @include mq(md) {
+    font-size: rem(100);
+    padding-left: rem(12);
+    padding-right: rem(18);
+  }
 }
 
 .p-learn__contents-num::after {
   content: "%";
   font-size: rem(36);
+  @include mq(md) {
+    font-size: rem(71);
+  }
 }
 
 .p-learn__contents-line01 {
   width: 100%;
   text-align: left;
+  font-size: rem(19);
   line-height: 1;
   letter-spacing: .1em;
+  @include mq(md) {
+    margin-left: rem(46);
+    font-size: rem(38.6);
+    letter-spacing: .05em;
+  }
 }
 
 .p-learn__contents-line02 {
   font-size: rem(17);
   letter-spacing: 0;
+  @include mq(md) {
+    font-size: rem(34);
+  }
 }
