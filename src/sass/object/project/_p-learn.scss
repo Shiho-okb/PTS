@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.p-learn__title {
+  text-align: center;
+}
+
+.p-learn__card {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  margin-top: rem(24);
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(27);
+  }
+}
+
+.p-learn__card .c-card {
+  @include mq(md) {
+    width: rem(230);
+    height: rem(270);
+  }
+}
+
+.p-learn__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: rem(18);
+}
+
+.p-learn__contents-img {
+  width: rem(33);
+  height: rem(74);
+}
+
+.p-learn__contents-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(3);
+  margin-bottom: rem(5);
+  font-size: rem(19);
+  letter-spacing: .075em;
+  font-weight: 700;
+  color: $blue;
+  text-align: center;
+}
+
+.p-learn__contents-num {
+  font-family: $font-num;
+  font-size: rem(52);
+  letter-spacing: rem(-1);
+  font-style: italic;
+  padding-right: rem(9);
+}
+
+.p-learn__contents-num::after {
+  content: "%";
+  font-size: rem(36);
+}
+
+.p-learn__contents-line01 {
+  width: 100%;
+  text-align: left;
+  line-height: 1;
+  letter-spacing: .1em;
+}
+
+.p-learn__contents-line02 {
+  font-size: rem(17);
+  letter-spacing: 0;
+}

@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-learn {
+  padding-top: rem(57);
+  @include mq(md) {
+    margin-top: rem(76);
+  }
+}

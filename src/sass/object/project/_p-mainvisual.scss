@@ -3,10 +3,6 @@
 .p-mainvisual {
   position: relative;
   overflow: hidden;
-  // min-height: rem(512);
-  @include mq(md) {
-    // min-height: rem(752);
-  }
 }
 
 .p-mainvisual::before {
@@ -121,8 +117,6 @@
   width: rem(100);
   @include mq(md) {
     bottom: clamp(10px, 1.3vw, 77px);
-    // bottom: calc(77 / 1440 * 100vw);
-    // bottom: rem(77);
     right: rem(20);
     width: rem(206);
   }
