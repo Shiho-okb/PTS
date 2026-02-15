@@ -35,7 +35,7 @@
   width: rem(126);
   @include mq(md) {
     top: rem(169);
-    right: rem(46);
+    left: 76%;
     width: clamp(150px, 19.5vw, 302px);
   }
 }
