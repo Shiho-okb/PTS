@@ -3,26 +3,35 @@
 .p-cta {
   position: relative;
   background-color: $lightblue;
-  z-index: -10;
 }
 
 .p-cta::before {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: url(../images/cta/cta_01.png);
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
+  @include mq(md) {
+    top: -10%;
+    bottom: -10%;
+    left: 0;
+    right: 0;
+    background: url(../images/cta/cta_01PC.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .p-cta__wrapper {
   padding-block: rem(46) rem(43.5);
+  @include mq(md) {
+    padding-block: rem(105) rem(99);
+  }
 }
 
 .p-cta__title {
@@ -30,6 +39,10 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .p-cta__title::before,
@@ -41,16 +54,28 @@
   height: rem(42);
   background-color: $black;
   transform-origin: center;
+  @include mq(md) {
+    width: rem(2);
+    height: rem(29);
+  }
 }
 
 .p-cta__title::before {
   left: rem(45);
   transform: translateY(-50%) rotate(-28deg);
+  @include mq(md) {
+    left: 29.5%;
+    transform: translateY(-50%) rotate(-32deg);
+  }
 }
 
 .p-cta__title::after {
   right: rem(45);
   transform: translateY(-50%) rotate(28deg);
+  @include mq(md) {
+    right: 29.5%;
+    transform: translateY(-50%) rotate(32deg);
+  }
 }
 
 .p-cta__text01 {
@@ -58,7 +83,12 @@
   font-weight: 700;
   letter-spacing: .037em;
   line-height: calc(22.5 / 16.5);
-  margin-left: rem(20);
+  margin-left: rem(10);
+  @include mq(md) {
+    font-size: rem(22);
+    letter-spacing: 0;
+    margin-left: 0;
+  }
 }
 
 .p-cta__text02 {
@@ -67,12 +97,17 @@
   line-height: calc(22.5 / 19.5);
   color: $yellow;
   margin-left: rem(15);
+  @include mq(md) {
+    font-size: rem(26);
+    margin-left: 0;
+  }
 }
 
 .p-cta__btn {
   width: rem(240);
   margin: rem(13) auto 0;
   @include mq(md) {
-    // width: rem(420);
+    width: rem(420);
+    margin: rem(37) auto 0;
   }
 }
