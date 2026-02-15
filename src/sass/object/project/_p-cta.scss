@@ -2,12 +2,12 @@
 
 .p-cta {
   position: relative;
+  overflow: visible;
   background-color: $lightblue;
 }
 
 .p-cta::before {
   content: "";
-  display: block;
   position: absolute;
   inset: 0;
   background: url(../images/cta/cta_01.png);
@@ -16,18 +16,23 @@
   background-size: cover;
   z-index: 0;
   @include mq(md) {
-    top: -10%;
-    bottom: -10%;
+    top: 50%;
     left: 0;
-    right: 0;
+    width: 100%;
+    height: rem(402);
+    transform: translateY(-50%);
     background: url(../images/cta/cta_01PC.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    clip-path: polygon(0 12.5%, 100% 0, 100% 87.5%, 0% 100%);
   }
 }
 
 .p-cta__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-block: rem(46) rem(43.5);
   @include mq(md) {
     padding-block: rem(105) rem(99);
@@ -61,19 +66,19 @@
 }
 
 .p-cta__title::before {
-  left: rem(45);
+  left: 0;
   transform: translateY(-50%) rotate(-28deg);
   @include mq(md) {
-    left: 29.5%;
+    left: rem(-15);
     transform: translateY(-50%) rotate(-32deg);
   }
 }
 
 .p-cta__title::after {
-  right: rem(45);
+  right: 0;
   transform: translateY(-50%) rotate(28deg);
   @include mq(md) {
-    right: 29.5%;
+    right: rem(-15);
     transform: translateY(-50%) rotate(32deg);
   }
 }
