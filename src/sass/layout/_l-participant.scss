@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-participant {
+  margin-top: rem(62);
+  @include mq(md) {
+    margin-top: rem(103);
+  }
+}

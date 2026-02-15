@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.p-participant__title {
+  text-align: center;
+}
+
+.p-participant__chart {
+  display: flex;
+  flex-direction: column;
+  gap: rem(32);
+  margin-top: rem(38);
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(66);
+  }
+}
+
+.p-participant__chart-text {
+  text-align: center;
+  margin-top: rem(5.5);
+  font-size: rem(19);
+  letter-spacing: .037em;
+  line-height: calc(25 / 19);
+  font-weight: 700;
+  @include mq(md) {
+    font-size: rem(26);
+    letter-spacing: .075em;
+    line-height: calc(34 / 26);
+  }
+}
