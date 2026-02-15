@@ -2,13 +2,15 @@
 
 .c-title {
   font-size: rem(24);
-  line-height: calc(37.5 / 24);
+  line-height: 1;
+  line-height: calc(38 / 24);
   letter-spacing: .02em;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   @include mq(md) {
     font-size: rem(42);
+    line-height: calc(40 / 24);
   }
 }
 
