@@ -19,10 +19,10 @@
   border-radius: 50%;
   display: flex;
   justify-content: center;
+  position: relative;
   @include mq(md) {
     width: rem(172);
     height: rem(172);
-    position: relative;
   }
 }
 
@@ -37,15 +37,20 @@
 }
 
 .c-card04:not(:last-child) .c-card04__image::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(2);
+  height: rem(40);
+  background: $lightblue02;
   @include mq(md) {
-    content: '';
-    position: absolute;
     top: 50%;
     left: 100%;
     transform: translateY(-50%);
     width: rem(40);
     height: rem(4);
-    background: $lightblue02;
   }
 }
 

@@ -83,6 +83,8 @@
 }
 
 .c-card05__title {
+  display: flex;
+  flex-direction: column;
   font-size: rem(16);
   font-weight: 700;
   line-height: calc(20 / 16);
@@ -131,4 +133,15 @@
     margin-top: rem(34);
     height: 100%;
   }
+}
+
+/*-------------------------------------------
+c-card05--second
+-------------------------------------------*/
+.c-card05--second .c-card05__date {
+  padding: rem(4) rem(5);
+}
+
+.c-card05--second .c-card05__time {
+  padding: rem(16) rem(5);
 }
