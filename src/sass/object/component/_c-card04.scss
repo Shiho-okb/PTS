@@ -22,6 +22,7 @@
   @include mq(md) {
     width: rem(172);
     height: rem(172);
+    position: relative;
   }
 }
 
@@ -32,6 +33,19 @@
   @include mq(md) {
     width: rem(74);
     height: rem(109);
+  }
+}
+
+.c-card04:not(:last-child) .c-card04__image::after {
+  @include mq(md) {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: rem(40);
+    height: rem(4);
+    background: $lightblue02;
   }
 }
 
