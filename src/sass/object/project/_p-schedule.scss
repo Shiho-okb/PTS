@@ -23,4 +23,8 @@
   flex-direction: column;
   gap: rem(30);
   margin-top: rem(22);
+  @include mq(md) {
+    gap: rem(5);
+    margin-top: rem(35);
+  }
 }

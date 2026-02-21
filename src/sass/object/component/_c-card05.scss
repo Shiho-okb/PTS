@@ -140,8 +140,24 @@ c-card05--second
 -------------------------------------------*/
 .c-card05--second .c-card05__date {
   padding: rem(4) rem(5);
+  @include mq(md) {
+    padding: rem(20);
+  }
 }
 
 .c-card05--second .c-card05__time {
   padding: rem(16) rem(5);
+  @include mq(md) {
+    padding: rem(22) rem(15);
+  }
+}
+
+.c-card05--second .c-card05__title {
+  @include mq(md) {
+    padding: rem(13) rem(33) rem(3) rem(23);
+  }
+}
+
+.c-card05--second .c-card05__btn {
+  margin-top: rem(28);
 }
