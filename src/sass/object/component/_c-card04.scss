@@ -92,6 +92,8 @@ c-card04--second
   height: rem(32);
   object-fit: cover;
   @include mq(md) {
+    width: rem(76);
+    height: rem(51);
   }
 }
 
@@ -103,6 +105,8 @@ c-card04--third
   height: rem(48.5);
   object-fit: cover;
   @include mq(md) {
+    width: rem(93);
+    height: rem(78);
   }
 }
 
@@ -114,6 +118,8 @@ c-card04--fourth
   height: rem(37.5);
   object-fit: cover;
   @include mq(md) {
+    width: rem(115);
+    height: rem(60);
   }
 }
 
@@ -125,5 +131,7 @@ c-card04--fifth
   height: rem(53);
   object-fit: cover;
   @include mq(md) {
+    width: rem(85);
+    height: rem(85);
   }
 }
