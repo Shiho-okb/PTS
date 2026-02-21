@@ -1,0 +1,100 @@
+@use "global" as *;
+
+.p-reason {
+  position: relative;
+  overflow: hidden;
+  padding-block: rem(64) rem(62);
+}
+
+.p-reason::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d6e3f1;
+  z-index: -10;
+}
+
+.p-reason .c-title {
+  text-align: center;
+}
+
+.p-reason__card03 {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  margin-top: rem(13);
+  @include mq(md) {
+    gap: rem(59);
+  }
+}
+
+// 奇数番目のカード
+.p-reason__card03 .c-card03:nth-child(odd) .c-card03__contents {
+  margin-right: rem(15);
+  padding: rem(24) rem(15) rem(131) 0;
+  @include mq(md) {
+    max-width: rem(814);
+    padding: rem(32) rem(15) rem(28) rem(42);
+  }
+}
+
+.p-reason__card03 .c-card03:nth-child(odd) .c-card03__contents::before {
+  margin-left: calc(50% - 50vw);
+  right: 0;
+}
+
+.p-reason__card03 .c-card03:nth-child(odd) .c-card03__text {
+  margin-right: rem(6);
+  @include mq(md) {
+    margin-right: 0;
+    margin-left: rem(5);
+  }
+}
+
+.p-reason__card03 .c-card03:nth-child(odd) .c-card03__image {
+  margin: rem(-103) 0 0 auto;
+  @include mq(md) {
+    margin: rem(-203) 0 0 auto;
+    right: rem(-15);
+  }
+}
+
+// 偶数番目のカード
+.p-reason__card03 .c-card03:nth-child(even) .c-card03__contents {
+  margin-left: rem(20);
+  padding: rem(24) 0 rem(131) rem(15);
+  @include mq(md) {
+    max-width: rem(800);
+    margin-left: auto;
+    padding: rem(32) rem(15) rem(28) 0;
+    left: rem(15);
+  }
+}
+
+.p-reason__card03 .c-card03:nth-child(even) .c-card03__head {
+  @include mq(md) {
+    max-width: rem(574);
+    margin-left: rem(189);
+  }
+}
+
+.p-reason__card03 .c-card03:nth-child(even) .c-card03__contents::before {
+  margin-right: calc(50% - 50vw);
+  left: 0;
+}
+
+.p-reason__card03 .c-card03:nth-child(even) .c-card03__text {
+  @include mq(md) {
+    margin-left: rem(189);
+  }
+}
+
+.p-reason__card03 .c-card03:nth-child(even) .c-card03__image {
+  margin: rem(-103) auto 0 0;
+  @include mq(md) {
+    margin: rem(-208) auto 0 0;
+    left: rem(15);
+  }
+}
