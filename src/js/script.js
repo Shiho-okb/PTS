@@ -92,6 +92,14 @@ jQuery(function ($) {
     //   delay: 0,
     //   disableOnInteraction: false,
     // },
+
+    // レスポンシブ設定
+    breakpoints: {
+      768: {
+        slidesPerView: 5.69,
+        spaceBetween: 28,
+      },
+    },
   });
 
 });

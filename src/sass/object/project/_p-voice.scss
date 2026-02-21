@@ -23,3 +23,13 @@
     width: rem(230);
   }
 }
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 213/142;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 230/153;
+  }
+}
