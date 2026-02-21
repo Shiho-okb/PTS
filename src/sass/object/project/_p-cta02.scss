@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.p-cta02 {
+  position: relative;
+  overflow: visible;
+  background-color: #c1d9ef;
+}
+
+.p-cta02::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../images/cta02/cta02_01.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  @include mq(md) {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: rem(402);
+    transform: translateY(-50%);
+    background: url(../images/cta02/cta02_01PC.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 82%);
+  }
+}
