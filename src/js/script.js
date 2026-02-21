@@ -81,4 +81,17 @@ jQuery(function ($) {
   });
 
 
+  /* ===== スワイパー ===== */
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: "1.7",
+    speed: 6000,
+    spaceBetween: 20,
+    allowTouchMove: false,
+    // autoplay: {
+    //   delay: 0,
+    //   disableOnInteraction: false,
+    // },
+  });
+
 });

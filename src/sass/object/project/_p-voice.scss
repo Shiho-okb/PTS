@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.p-voice__wrapper {
+  overflow-x: clip;
+}
+
+.p-voice .c-title {
+  text-align: center;
+}
+
+.p-voice .swiper {
+  margin-top: rem(29);
+}
+
+.p-voice .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.swiper .swiper-slide {
+  width: rem(213);
+  overflow: hidden;
+  @include mq(md) {
+    width: rem(230);
+  }
+}
