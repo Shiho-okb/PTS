@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-flow {
+  margin-top: rem(58);
+  @include mq(md) {
+    margin-top: rem(100);
+  }
+}
