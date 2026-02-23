@@ -774,59 +774,49 @@
         </h2>
         <!-- フォーム -->
         <form class="p-contact__form p-contact-form">
-
           <!-- 会社名 -->
           <div class="p-contact-form__group">
             <label for="company">会社名</label>
             <input type="text" name="company" id="company" placeholder="株式会社アシストセミナー">
           </div>
-
           <!-- 郵便番号 -->
-          <div class="p-contact-form__group">
+          <div class="p-contact-form__group p-contact-form__group--short">
             <label for="zipcode">郵便番号</label>
             <input type="text" name="zipcode" id="zipcode" placeholder="000-0000" inputmode="numeric">
           </div>
-
           <!-- 住所 -->
           <div class="p-contact-form__group">
             <label for="address">住　所<span class="required">※</span></label>
             <input type="text" name="address" id="address" placeholder="東京都新宿区XXX-XXXX" required>
           </div>
-
           <!-- 所属部署 -->
-          <div class="p-contact-form__group">
+          <div class="p-contact-form__group p-contact-form__group--middle">
             <label for="department">所属部署</label>
             <input type="text" name="department" id="department" placeholder="広報部">
           </div>
-
           <!-- 氏名 -->
-          <div class="p-contact-form__group">
+          <div class="p-contact-form__group p-contact-form__group--short">
             <label for="name">氏　名<span class="required">※</span></label>
             <input type="text" name="name" id="name" placeholder="田中　太郎" required>
           </div>
-
           <!-- フリガナ -->
-          <div class="p-contact-form__group">
+          <div class="p-contact-form__group p-contact-form__group--short">
             <label for="kana">フリガナ<span class="required">※</span></label>
             <input type="text" name="kana" id="kana" placeholder="タナカ　タロウ" required>
           </div>
-
           <!-- 電話 -->
-          <div class="p-contact-form__group">
+          <div class="p-contact-form__group p-contact-form__group--middle">
             <label for="tel">電話番号<span class="required">※</span></label>
             <input type="tel" name="tel" id="tel" placeholder="000-0000-0000" required>
           </div>
-
           <!-- メール -->
-          <div class="p-contact-form__group">
+          <div class="p-contact-form__group p-contact-form__group--middle">
             <label for="email">メールアドレス<span class="required">※</span></label>
             <input type="email" name="email" id="email" placeholder="XXXX@XXXXX.com" required>
           </div>
-
           <!-- 年月 -->
           <div class="p-contact-form__group">
             <label>受講希望年月<span class="required">※</span></label>
-
             <div class="p-contact-form__row">
               <div class="p-contact-form__select p-contact-form__select--year">
                 <select name="year" id="year" required>
@@ -839,7 +829,6 @@
                 </select>
               </div>
               <span>年</span>
-
               <div class="p-contact-form__select p-contact-form__select--month">
                 <select name="month" id="month" required>
                   <option value="" disabled selected hidden>00</option>
@@ -860,24 +849,21 @@
               <span>月</span>
             </div>
           </div>
-
           <!-- 備考 -->
-          <div class="p-contact-form__group">
+          <div class="p-contact-form__group p-contact-form__group--textarea">
             <label for="note">備　考</label>
             <textarea name="note" id="note" placeholder="お問い合わせ内容をご記入ください。"></textarea>
           </div>
-
+          <!-- 個人情報保護方針 -->
           <label class="p-contact-form__privacy">
             <input type="checkbox" name="privacy" id="privacy" required="">
             <span class="p-contact-form__note">
               <a href="#" target="_blank" rel="noopener">個人情報保護方針</a>に同意いただけましたら、
-              <br>
+              <br class="u-sp">
               送信ボタンを押してください。
             </span>
           </label>
-
           <button class="p-contact-form__btn">内容を確認</button>
-
         </form>
       </div>
     </section>

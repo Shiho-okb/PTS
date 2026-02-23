@@ -16,28 +16,53 @@
   color: $white;
 }
 
-/* カード */
+/*-------------------------------------------
+フォーム共通スタイル
+-------------------------------------------*/
 .p-contact__form {
   background: $white;
   padding: rem(12) rem(12.5) rem(30) rem(20);
   margin-top: rem(39);
   border-radius: rem(7.5);
+  @include mq(md) {
+    padding: rem(67) rem(38) rem(50) rem(52);
+    margin-top: rem(47);
+    border-radius: rem(15);
+  }
 }
 
-/* グループ */
 .p-contact-form__group {
   margin-top: rem(14);
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    margin-top: rem(4);
+  }
+}
+
+.p-contact-form__group--textarea {
+  @include mq(md) {
+    align-items: flex-start;
+  }
 }
 
 .p-contact-form__group label {
   display: flex;
-  // display: block;
   font-size: rem(16);
   font-weight: 700;
   letter-spacing: .037em;
+  @include mq(md) {
+    font-size: rem(18);
+    width: rem(173);
+  }
 }
 
-/* input */
+.p-contact-form__group--textarea label {
+  @include mq(md) {
+    margin-top: rem(15);
+  }
+}
+
 .p-contact-form__group input,
 .p-contact-form__group select,
 .p-contact-form__group textarea {
@@ -48,6 +73,32 @@
   padding: rem(12);
   font-size: rem(14);
   margin-top: rem(10);
+  @include mq(md) {
+    border: 3px solid transparent;
+    border-radius: rem(8);
+    padding: rem(8);
+    font-size: rem(16);
+    cursor: pointer;
+  }
+}
+
+.p-contact-form__group input,
+.p-contact-form__group textarea {
+  @include mq(md) {
+    width: rem(738);
+  }
+}
+
+.p-contact-form__group--middle input {
+  @include mq(md) {
+    width: rem(426);
+  }
+}
+
+.p-contact-form__group--short input {
+  @include mq(md) {
+    width: rem(261);
+  }
 }
 
 .p-contact-form__group input:focus,
@@ -58,14 +109,13 @@
 }
 
 .p-contact-form__group input::placeholder,
-.p-contact-form__group textarea::placeholder {
-  color: #a8a8a8;
-  letter-spacing: .037em;
-}
-
+.p-contact-form__group textarea::placeholder,
 .p-contact-form__group select {
   color: #a8a8a8;
   letter-spacing: .037em;
+  @include mq(md) {
+    letter-spacing: .075em;
+  }
 }
 
 .p-contact-form__group select:valid {
@@ -74,17 +124,27 @@
 
 .p-contact-form__group textarea {
   min-height: rem(107);
+  @include mq(md) {
+    min-height: rem(144);
+  }
 }
 
-/* 必須 */
+/*-------------------------------------------
+必須マーク
+-------------------------------------------*/
 .required {
   color: #da0000;
   font-size: rem(11);
   font-weight: 700;
   margin-left: rem(5);
+  @include mq(md) {
+    font-size: rem(12);
+  }
 }
 
-/* 年月横並び */
+/*-------------------------------------------
+年月
+-------------------------------------------*/
 .p-contact-form__row {
   display: flex;
   align-items: center;
@@ -114,26 +174,38 @@
 
 .p-contact-form__select--year {
   width: 30%;
+  @include mq(md) {
+    width: rem(127);
+  }
 }
 
 .p-contact-form__select--month {
   width: 22%;
   margin-left: rem(14.5);
+  @include mq(md) {
+    width: rem(67);
+    margin-left: rem(21);
+  }
 }
 
 .p-contact-form__row span {
-  margin-left: rem(8);
+  margin: rem(10) 0 0 rem(8);
   font-weight: 700;
-  margin-top: rem(10);
+  @include mq(md) {
+    margin: rem(10) 0 0 rem(11);
+  }
 }
 
-/* 注意 */
+/*-------------------------------------------
+個人情報保護方針
+-------------------------------------------*/
 .p-contact-form__privacy {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: rem(5);
   @include mq(md) {
+    margin-top: rem(30);
     cursor: pointer;
   }
 }
@@ -145,8 +217,15 @@
   width: rem(15);
   height: rem(15);
   border: 2px solid $black;
-  border-radius: rem(4);
+  border-radius: rem(3);
   cursor: pointer;
+  @include mq(md) {
+    margin: 0 rem(5) 0 rem(28);
+    width: rem(19);
+    height: rem(19);
+    border: 2.5px solid $black;
+    border-radius: rem(5);
+  }
 }
 
 .p-contact-form__privacy input:checked::after {
@@ -159,6 +238,11 @@
   border-bottom: 3px solid $blue02;
   border-left: 3px solid $blue02;
   transform: rotate(-45deg);
+  @include mq(md) {
+    top: rem(-1);
+    width: rem(20);
+    height: rem(10);
+  }
 }
 
 .p-contact-form__note {
@@ -168,6 +252,10 @@
   line-height: calc(30 / 14);
   margin-top: rem(18);
   text-align: center;
+  @include mq(md) {
+    font-size: rem(16);
+    margin-top: 0;
+  }
 }
 
 .p-contact-form__note a {
@@ -176,7 +264,9 @@
   text-underline-offset: rem(8);
 }
 
-/* ボタン */
+/*-------------------------------------------
+ボタン
+-------------------------------------------*/
 .p-contact-form__btn {
   width: rem(225);
   background: $blue02;
@@ -188,4 +278,10 @@
   letter-spacing: .075em;
   display: block;
   margin: rem(22) auto 0;
+  @include mq(md) {
+    width: rem(380);
+    padding: rem(21);
+    font-size: rem(18);
+    margin: rem(39) auto 0;
+  }
 }

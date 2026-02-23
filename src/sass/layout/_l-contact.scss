@@ -2,4 +2,7 @@
 
 .l-contact {
   padding-block: rem(59) rem(60);
+  @include mq(md) {
+    padding-block: rem(91) rem(90);
+  }
 }
