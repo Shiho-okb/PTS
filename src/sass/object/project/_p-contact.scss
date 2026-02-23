@@ -1,0 +1,191 @@
+@use "global" as *;
+
+.p-contact {
+  background: linear-gradient(
+    180deg,
+    #2a6eae,
+    #164a7a);
+}
+
+.p-contact .c-title {
+  text-align: center;
+  color: $white;
+}
+
+.p-contact .c-title::before {
+  color: $white;
+}
+
+/* カード */
+.p-contact__form {
+  background: $white;
+  padding: rem(12) rem(12.5) rem(30) rem(20);
+  margin-top: rem(39);
+  border-radius: rem(7.5);
+}
+
+/* グループ */
+.p-contact-form__group {
+  margin-top: rem(14);
+}
+
+.p-contact-form__group label {
+  display: flex;
+  // display: block;
+  font-size: rem(16);
+  font-weight: 700;
+  letter-spacing: .037em;
+}
+
+/* input */
+.p-contact-form__group input,
+.p-contact-form__group select,
+.p-contact-form__group textarea {
+  width: 100%;
+  background: #e6eef6;
+  border: 2px solid transparent;
+  border-radius: rem(4);
+  padding: rem(12);
+  font-size: rem(14);
+  margin-top: rem(10);
+}
+
+.p-contact-form__group input:focus,
+.p-contact-form__group select:focus,
+.p-contact-form__group textarea:focus {
+  outline: none;
+  border-color: $blue02;
+}
+
+.p-contact-form__group input::placeholder,
+.p-contact-form__group textarea::placeholder {
+  color: #a8a8a8;
+  letter-spacing: .037em;
+}
+
+.p-contact-form__group select {
+  color: #a8a8a8;
+  letter-spacing: .037em;
+}
+
+.p-contact-form__group select:valid {
+  color: $black;
+}
+
+.p-contact-form__group textarea {
+  min-height: rem(107);
+}
+
+/* 必須 */
+.required {
+  color: #da0000;
+  font-size: rem(11);
+  font-weight: 700;
+  margin-left: rem(5);
+}
+
+/* 年月横並び */
+.p-contact-form__row {
+  display: flex;
+  align-items: center;
+}
+
+.p-contact-form__select {
+  position: relative;
+}
+
+.p-contact-form__group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.p-contact-form__select::after {
+  content: "";
+  position: absolute;
+  right: rem(8);
+  top: 50%;
+  width: rem(13);
+  height: rem(12);
+  background: $black;
+  clip-path: polygon(0 0, 100% 0%, 50% 100%);
+  pointer-events: none;
+}
+
+.p-contact-form__select--year {
+  width: 30%;
+}
+
+.p-contact-form__select--month {
+  width: 22%;
+  margin-left: rem(14.5);
+}
+
+.p-contact-form__row span {
+  margin-left: rem(8);
+  font-weight: 700;
+  margin-top: rem(10);
+}
+
+/* 注意 */
+.p-contact-form__privacy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(5);
+  @include mq(md) {
+    cursor: pointer;
+  }
+}
+
+.p-contact-form__privacy input {
+  margin: 0 0 rem(10) 0;
+  appearance: none;
+  position: relative;
+  width: rem(15);
+  height: rem(15);
+  border: 2px solid $black;
+  border-radius: rem(4);
+  cursor: pointer;
+}
+
+.p-contact-form__privacy input:checked::after {
+  content: "";
+  position: absolute;
+  top: rem(-2);
+  left: rem(1.5);
+  width: rem(15);
+  height: rem(8);
+  border-bottom: 3px solid $blue02;
+  border-left: 3px solid $blue02;
+  transform: rotate(-45deg);
+}
+
+.p-contact-form__note {
+  font-size: rem(14);
+  font-weight: 700;
+  letter-spacing: .037em;
+  line-height: calc(30 / 14);
+  margin-top: rem(18);
+  text-align: center;
+}
+
+.p-contact-form__note a {
+  color: #da0000;
+  text-decoration: underline;
+  text-underline-offset: rem(8);
+}
+
+/* ボタン */
+.p-contact-form__btn {
+  width: rem(225);
+  background: $blue02;
+  color: $white;
+  padding: rem(13);
+  border: none;
+  font-size: rem(16);
+  font-weight: 700;
+  letter-spacing: .075em;
+  display: block;
+  margin: rem(22) auto 0;
+}

@@ -159,5 +159,7 @@ c-card05--second
 }
 
 .c-card05--second .c-card05__btn {
-  margin-top: rem(28);
+  @include mq(md) {
+    margin-top: rem(28);
+  }
 }
