@@ -89,7 +89,9 @@ jQuery(function ($) {
 
       // 通常フェードイン
       const targets = [
-        ".js-title"
+        ".js-title",
+        ".js-head__left",
+        ".js-head__right",
       ].join(", ");
       $(targets).each(function () {
         const bPosition = $(this).offset().top;
