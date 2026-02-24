@@ -1,0 +1,33 @@
+@use "global" as *;
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  0% {
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+  }
+  100% {
+    opacity: 0.4;
+    transform: translate(0);
+  }
+}
+
+/* フェードインさせるクラス */
+.u-fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.u-fadeIn--title {
+  animation-name: fadeInTitle;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}

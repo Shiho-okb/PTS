@@ -2,6 +2,8 @@
 
 .p-participant .c-title {
   text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .p-participant__chart {

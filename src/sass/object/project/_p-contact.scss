@@ -10,6 +10,8 @@
 .p-contact .c-title {
   text-align: center;
   color: $white;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .p-contact .c-title::before {

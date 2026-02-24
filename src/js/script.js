@@ -81,6 +81,51 @@ jQuery(function ($) {
   });
 
 
+  /* ===== フェードイン ===== */
+  $(function () {
+    function checkFadeIn() {
+      const wHeight = $(window).height();
+      const wScroll = $(window).scrollTop();
+
+      // 通常フェードイン
+      const targets = [
+        ".js-title"
+      ].join(", ");
+      $(targets).each(function () {
+        const bPosition = $(this).offset().top;
+
+        if (wScroll > bPosition - wHeight + 200) {
+          if ($(this).hasClass("js-mainvisual__title")) {
+            $(this).addClass("u-fadeIn--title");
+          } else {
+            $(this).addClass("u-fadeIn");
+          }
+        }
+      });
+
+      // 追従ボタン用
+      const fixedBtn = $(".js-fixed");
+      const footer = $(".js-footer");
+
+      if (!footer.length) return;
+      const footerTop = footer.offset().top;
+      const fixedBtnHeight = fixedBtn.outerHeight();
+      const windowBottom = wScroll + wHeight;
+
+      // 表示条件
+      if (wScroll > 100 && windowBottom < footerTop + fixedBtnHeight) {
+        fixedBtn.addClass("is-show");
+      } else {
+        fixedBtn.removeClass("is-show");
+      }
+    }
+
+    // 初期表示
+    $(window).on("scroll", checkFadeIn);
+    checkFadeIn();
+  });
+
+
   /* ===== スワイパー ===== */
   const swiper = new Swiper(".swiper", {
     loop: true,
