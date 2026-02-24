@@ -111,10 +111,12 @@
 }
 
 .p-mainvisual__btn04 {
-  position: absolute;
-  bottom: rem(62);
+  // position: absolute;
+  position: fixed;
+  bottom: rem(191);
   right: rem(3.5);
   width: rem(100);
+  z-index: 500;
   @include mq(md) {
     bottom: clamp(10px, 1.3vw, 77px);
     right: rem(20);
