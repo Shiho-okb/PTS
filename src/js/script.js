@@ -105,7 +105,18 @@ jQuery(function ($) {
         }
       });
 
-      // 追従ボタン用
+      // ①メインビジュアルボタン（初期表示 → スクロールで消える）
+      const mvBtn = $(".js-mainvisual-btn");
+
+      if (mvBtn.length) {
+        if (wScroll > 80) {
+          mvBtn.addClass("is-hide");
+        } else {
+          mvBtn.removeClass("is-hide");
+        }
+      }
+
+      // ②追従ボタン（スクロールで表示 → フッター前で消える）
       const fixedBtn = $(".js-fixed");
       const footer = $(".js-footer");
 

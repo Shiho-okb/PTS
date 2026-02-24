@@ -113,17 +113,23 @@
 }
 
 .p-mainvisual__btn04 {
-  // position: absolute;
   position: fixed;
-  bottom: rem(191);
+  top: rem(397);
   right: rem(3.5);
   width: rem(100);
   z-index: 500;
+  opacity: 1;
+  transition: opacity .5s ease;
   @include mq(md) {
-    bottom: clamp(10px, 1.3vw, 77px);
+    top: rem(468);
     right: rem(20);
     width: rem(206);
   }
+}
+
+.p-mainvisual__btn04.is-hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .p-mainvisual__btn {

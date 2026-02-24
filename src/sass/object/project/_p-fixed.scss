@@ -6,4 +6,11 @@
   right: rem(15);
   top: rem(62);
   z-index: 500;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+/* フェードインさせるクラス */
+.p-fixed .c-btn03.is-show {
+  opacity: 1;
 }
