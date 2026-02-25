@@ -242,10 +242,6 @@
   }
 }
 
-.p-header-nav-item__accordion--main.open .p-header-nav-item__toggle::before {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
 .p-header-nav-item__accordion .p-header-nav-item__link {
   width: 100%;
 }
@@ -281,7 +277,6 @@
 ドロップメニュー
 -------------------------------------------*/
 .p-header__dropmenu {
-  display: none;
   @include mq(md) {
     transform: scaleY(0);
     transform-origin: top center;

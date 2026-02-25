@@ -50,9 +50,9 @@
   }
 }
 
-.p-footer-nav-item__accordion--main.open .p-footer-nav-item__toggle::before {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
+// .p-footer-nav-item__accordion--main.open .p-footer-nav-item__toggle::before {
+//   transform: translate(-50%, -50%) rotate(90deg);
+// }
 
 .p-footer-nav-item__toggle {
   position: relative;
@@ -139,10 +139,9 @@
 ドロップメニュー
 -------------------------------------------*/
 .p-footer__dropmenu {
-  display: none;
+  display: block;
   padding-inline: rem(20) rem(15);
   @include mq(md) {
-    display: block;
     padding: rem(4) rem(7) 0 0;
   }
 }
