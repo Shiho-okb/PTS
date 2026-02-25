@@ -87,14 +87,20 @@ jQuery(function ($) {
         }
       });
 
-      // ①メインビジュアルボタン（初期表示 → スクロールで消える）
+      // ①メインビジュアルボタン（初期表示 → スクロールで消える + ドロワー時非表示）
       const mvBtn = $(".js-mainvisual-btn");
 
       if (mvBtn.length) {
-        if (wScroll > 80) {
+        // ハンバーガー開いてたら常に非表示
+        if ($("body").hasClass("active")) {
           mvBtn.addClass("is-hide");
         } else {
-          mvBtn.removeClass("is-hide");
+
+          if (wScroll > 80) {
+            mvBtn.addClass("is-hide");
+          } else {
+            mvBtn.removeClass("is-hide");
+          }
         }
       }
 
@@ -118,6 +124,9 @@ jQuery(function ($) {
     // 初期表示
     $(window).on("scroll", checkFadeIn);
     checkFadeIn();
+
+    // ハンバーガー押した瞬間にも再判定
+    $('.js-hamburger').on('click', checkFadeIn);
   });
 
 
