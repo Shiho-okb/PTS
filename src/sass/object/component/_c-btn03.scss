@@ -15,7 +15,12 @@
   border: rem(1.5) solid $white;
   transition: all .3s;
   @include mq(md) {
-    display: none;
+    justify-content: center;
+    gap: rem(12);
+    padding: rem(22);
+    font-size: rem(22);
+    letter-spacing: .075em;
+    border: rem(3) solid $white;
   }
 }
 
@@ -26,6 +31,12 @@
   height: rem(15);
   border-radius: 50%;
   background: $white;
+  @include mq(md) {
+    position: unset;
+    display: inline-block;
+    width: rem(22);
+    height: rem(22);
+  }
 }
 
 .c-btn03 span::before {
@@ -39,8 +50,12 @@
   border-width: rem(4) 0 rem(4) rem(7);
   border-color: transparent transparent transparent $orange;
   transform: translate(-50%, -50%);
+  @include mq(md) {
+    left: 78.5%;
+    border-width: rem(6) 0 rem(6) rem(10);
+  }
 }
 
-// .p-btn03 {
-//   width: rem(140);
-// }
+.p-btn03 {
+  width: rem(140);
+}
