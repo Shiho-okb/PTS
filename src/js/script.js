@@ -119,6 +119,28 @@ jQuery(function ($) {
       } else {
         fixedBtn.removeClass("is-show");
       }
+
+      // ③ヘッダー制御（メインビジュアル越えたら背景表示 → フッター前で非表示）
+      const header = $(".p-header");
+      const mv = $(".p-mainvisual");
+
+      if (mv.length) {
+        const mvBottom = mv.offset().top + mv.outerHeight();
+
+        // メインビジュアル越えたら白背景表示
+        if (wScroll > mvBottom - 80) {
+          header.addClass("is-scrolled");
+        } else {
+          header.removeClass("is-scrolled");
+        }
+
+        // フッター手前で非表示
+        if (windowBottom > footerTop - 80) {
+          header.addClass("is-hide");
+        } else {
+          header.removeClass("is-hide");
+        }
+      }
     }
 
     // 初期表示
