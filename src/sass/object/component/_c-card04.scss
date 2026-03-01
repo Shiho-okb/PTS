@@ -30,9 +30,11 @@
   width: rem(46);
   height: rem(69);
   object-fit: cover;
+  aspect-ratio: 46 / 43;
   @include mq(md) {
     width: rem(74);
     height: rem(109);
+    aspect-ratio: 74 / 109;
   }
 }
 
@@ -110,9 +112,11 @@ c-card04--second
   width: rem(48);
   height: rem(32);
   object-fit: cover;
+  aspect-ratio: 48 / 32;
   @include mq(md) {
     width: rem(76);
     height: rem(51);
+    aspect-ratio: 76 / 51;
   }
 }
 
@@ -120,12 +124,14 @@ c-card04--second
 c-card04--third
 -------------------------------------------*/
 .c-card04--third .c-card04__image img {
-  width: rem(57.5);
-  height: rem(48.5);
+  width: rem(58);
+  height: rem(49);
   object-fit: cover;
+  aspect-ratio: 58 / 49;
   @include mq(md) {
     width: rem(93);
     height: rem(78);
+    aspect-ratio: 93 / 78;
   }
 }
 
@@ -134,11 +140,13 @@ c-card04--fourth
 -------------------------------------------*/
 .c-card04--fourth .c-card04__image img {
   width: rem(72);
-  height: rem(37.5);
+  height: rem(38);
   object-fit: cover;
+  aspect-ratio: 72 / 38;
   @include mq(md) {
     width: rem(115);
     height: rem(60);
+    aspect-ratio: 115 / 60;
   }
 }
 
@@ -149,8 +157,10 @@ c-card04--fifth
   width: rem(53);
   height: rem(53);
   object-fit: cover;
+  aspect-ratio: 53 / 53;
   @include mq(md) {
     width: rem(85);
     height: rem(85);
+    aspect-ratio: 85 / 85;
   }
 }

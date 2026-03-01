@@ -1,9 +1,7 @@
 @use "global" as *;
 
 .p-footer {
-  padding-block: rem(130) rem(40);
   @include mq(md) {
-    padding-block: rem(88) rem(19);
     transition: .4s;
   }
 }
@@ -43,16 +41,12 @@
 -------------------------------------------*/
 .p-footer__nav {
   width: 100%;
-  margin-top: rem(16);
+  margin-top: rem(13);
   @include mq(md) {
     width: auto;
-    margin-top: 0;
+    margin-top: rem(-3);
   }
 }
-
-// .p-footer-nav-item__accordion--main.open .p-footer-nav-item__toggle::before {
-//   transform: translate(-50%, -50%) rotate(90deg);
-// }
 
 .p-footer-nav-item__toggle {
   position: relative;

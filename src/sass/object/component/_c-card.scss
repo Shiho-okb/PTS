@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     gap: rem(26);
-    padding: rem(35) rem(16) rem(31);
+    padding: rem(35) 0 rem(31);
     border-radius: rem(15);
   }
 }
@@ -36,10 +36,15 @@
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   font-size: rem(18);
   letter-spacing: 0;
   line-height: calc(25 / 18);
   font-weight: 700;
+  min-width: 0;
+  flex: 1;
+  white-space: nowrap;
+  width: 100%;
   @include mq(md) {
     line-height: 1.7;
     letter-spacing: .037em;
@@ -70,7 +75,7 @@ c-card--second
   gap: rem(20);
   padding: rem(18) rem(22.5) rem(16) rem(27.5);
   @include mq(md) {
-    padding: rem(31) rem(16) rem(37);
+    padding: rem(31) 0 rem(37);
   }
 }
 
@@ -96,7 +101,7 @@ c-card--third
   padding: rem(20) rem(13) rem(21) rem(23);
   @include mq(md) {
     gap: rem(25);
-    padding: rem(31) rem(12) rem(37);
+    padding: rem(31) 0 rem(37);
   }
 }
 
@@ -118,11 +123,11 @@ c-card--third
 c-card--fourth
 -------------------------------------------*/
 .c-card--fourth {
-  gap: rem(12);
+  gap: rem(3);
   padding: rem(14) 0 rem(12.5) rem(27);
   @include mq(md) {
     gap: rem(17);
-    padding: rem(23) rem(3) rem(37);
+    padding: rem(23) 0 rem(37);
   }
 }
 

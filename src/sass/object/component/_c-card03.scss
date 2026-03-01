@@ -47,6 +47,7 @@
   font-size: rem(22);
   font-weight: 700;
   line-height: calc(30 / 22);
+  white-space: nowrap;
   @include mq(md) {
     font-size: rem(24);
     line-height: calc(32 / 24);

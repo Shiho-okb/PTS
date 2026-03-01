@@ -9,7 +9,7 @@
   opacity: 0;
   transition: opacity .5s ease;
   @include mq(md) {
-    width: rem(280);
+    width: rem(279);
     top: rem(100);
   }
 }

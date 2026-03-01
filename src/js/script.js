@@ -91,7 +91,7 @@ jQuery(function ($) {
       const mvBtn = $(".js-mainvisual-btn");
 
       if (mvBtn.length) {
-        // ハンバーガー開いてたら常に非表示
+        // ハンバーガーが開いてたら常に非表示
         if ($("body").hasClass("active")) {
           mvBtn.addClass("is-hide");
         } else {
@@ -104,7 +104,7 @@ jQuery(function ($) {
         }
       }
 
-      // ②追従ボタン（スクロールで表示 → フッター前で消える）
+      // ②追従ボタン（スクロールで表示 → フッター前で消える + ドロワー時非表示）
       const fixedBtn = $(".js-fixed");
       const footer = $(".js-footer");
 
@@ -113,11 +113,16 @@ jQuery(function ($) {
       const fixedBtnHeight = fixedBtn.outerHeight();
       const windowBottom = wScroll + wHeight;
 
-      // 表示条件
-      if (wScroll > 100 && windowBottom < footerTop + fixedBtnHeight) {
-        fixedBtn.addClass("is-show");
-      } else {
+      // ハンバーガーが開いていたら常に非表示
+      if ($("body").hasClass("active")) {
         fixedBtn.removeClass("is-show");
+      } else {
+
+        if (wScroll > 100 && windowBottom < footerTop + fixedBtnHeight) {
+          fixedBtn.addClass("is-show");
+        } else {
+          fixedBtn.removeClass("is-show");
+        }
       }
 
       // ③ヘッダー制御（メインビジュアル越えたら背景表示 → フッター前で非表示）

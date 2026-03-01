@@ -2,8 +2,8 @@
 
 .c-icon {
   width: rem(100);
-  aspect-ratio: 1 / 1;
   border-radius: 50%;
+  aspect-ratio: 1 / 1;
   background: $blue;
   display: flex;
   align-items: center;
@@ -17,6 +17,7 @@
   width: 94%;
   height: 94%;
   border-radius: 50%;
+  aspect-ratio: 1 / 1;
   border: rem(1) solid $white;
   display: flex;
   align-items: center;
