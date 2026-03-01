@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-voice__wrapper {
-  overflow-x: clip;
+  overflow: hidden;
 }
 
 .p-voice .c-title {
@@ -16,6 +16,7 @@
 
 .p-voice .swiper-wrapper {
   transition-timing-function: linear;
+  cursor: pointer;
 }
 
 .swiper .swiper-slide {

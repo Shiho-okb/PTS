@@ -153,24 +153,77 @@ jQuery(function ($) {
 
 
   /* ===== スワイパー ===== */
+  // 複製用
+  var swiperWrapper = $('.swiper .swiper-wrapper');
+
+  // 現在のスライドを取得
+  var slideItems = swiperWrapper.children('.swiper-slide');
+
+  // 1回だけ複製して末尾に追加
+  slideItems.each(function() {
+    var $clone = $(this).clone();
+    swiperWrapper.append($clone);
+  });
+
   const swiper = new Swiper(".swiper", {
     loop: true,
-    slidesPerView: "1.7",
-    speed: 6000,
+    slidesPerView: "auto",
+    speed: 8000,
     spaceBetween: 20,
     allowTouchMove: false,
-    // autoplay: {
-    //   delay: 0,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
 
     // レスポンシブ設定
     breakpoints: {
       768: {
-        slidesPerView: 5.69,
         spaceBetween: 28,
       },
     },
   });
 
+  const swiperEl = document.querySelector(".swiper");
+  let currentTranslate = 0;
+
+  // ==========================
+  // hoverで即停止
+  // ==========================
+  swiperEl.addEventListener("mouseenter", () => {
+    currentTranslate = swiper.getTranslate();
+
+    swiper.setTranslate(currentTranslate);
+    swiper.setTransition(0);
+  });
+
+  // ==========================
+  // hover解除で即再開（自然な速度）
+  // ==========================
+  swiperEl.addEventListener("mouseleave", () => {
+    currentTranslate = swiper.getTranslate();
+
+    const activeSlide = swiper.el.querySelector(".swiper-slide-active");
+
+    const slideWidth = activeSlide.offsetWidth;
+
+    const marginLeft = parseFloat(getComputedStyle(activeSlide).marginLeft) || 0;
+    const marginRight = parseFloat(getComputedStyle(activeSlide).marginRight) || 0;
+
+    // 1スライド分の全幅（マージン込み）を計算
+    const totalSlideWidth = slideWidth + marginLeft + marginRight;
+
+    // 次のスライド境界までの残り距離
+    const remainingDistance =
+      -totalSlideWidth - (currentTranslate % totalSlideWidth);
+
+    // 距離割合を計算
+    const ratio = Math.abs(remainingDistance / totalSlideWidth);
+
+    // 残り距離に応じたtransition時間を設定
+    const newDuration = swiper.params.speed * ratio;
+
+    swiper.setTranslate(currentTranslate + remainingDistance);
+    swiper.setTransition(newDuration);
+  });
 });
