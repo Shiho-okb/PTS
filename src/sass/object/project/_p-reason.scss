@@ -54,7 +54,7 @@
   }
 }
 
-.c-card03__head--left {
+.p-reason__cards .c-card03:nth-child(odd) .c-card03__head {
   opacity: 0;
   transform: translate(-100px, 0);
 }
@@ -92,7 +92,7 @@
   left: 0;
 }
 
-.c-card03__head--right {
+.p-reason__cards .c-card03:nth-child(even) .c-card03__head {
   opacity: 0;
   transform: translateX(100px);
   @include mq(md) {
