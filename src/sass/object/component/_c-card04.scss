@@ -45,7 +45,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: rem(2);
-  height: rem(40);
+  height: calc(100% + rem(30));
   background: $lightblue02;
   @include mq(md) {
     top: 50%;
