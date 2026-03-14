@@ -91,6 +91,14 @@
   }
 }
 
+.p-contact-form__group textarea {
+  min-height: rem(107);
+  resize: none;
+  @include mq(md) {
+    min-height: rem(144);
+  }
+}
+
 .p-contact-form__group--middle input {
   @include mq(md) {
     width: rem(426);
@@ -122,13 +130,6 @@
 
 .p-contact-form__group select:valid {
   color: $black;
-}
-
-.p-contact-form__group textarea {
-  min-height: rem(107);
-  @include mq(md) {
-    min-height: rem(144);
-  }
 }
 
 /*-------------------------------------------
