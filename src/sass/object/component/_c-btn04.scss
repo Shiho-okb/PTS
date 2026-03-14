@@ -16,6 +16,7 @@
   border: rem(1.5) solid $white;
   transition: all .3s;
   gap: rem(5);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
   @include mq(md) {
     padding-block: rem(25);
     font-size: rem(20);
