@@ -32,7 +32,7 @@ body {
 }
 
 // ホバー
-a,
+a:not(.c-btn),
 button {
   @include mq(md) {
     transition: .3s;
