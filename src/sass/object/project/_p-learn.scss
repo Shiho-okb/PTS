@@ -20,7 +20,7 @@
 .p-learn__card .c-card {
   @include mq(md) {
     width: rem(230);
-    height: rem(270);
+    min-height: rem(270);
   }
 }
 
