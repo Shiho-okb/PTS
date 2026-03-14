@@ -25,7 +25,7 @@
   transform: translateY(100px);
 }
 
-.p-reason__card03 {
+.p-reason__cards {
   display: flex;
   flex-direction: column;
   gap: rem(30);
@@ -37,7 +37,7 @@
 }
 
 // 奇数番目のカード
-.p-reason__card03 .c-card03:nth-child(odd) .c-card03__contents {
+.p-reason__cards .c-card03:nth-child(odd) .c-card03__contents {
   margin-right: rem(15);
   padding: rem(24) rem(15) rem(131) 0;
   @include mq(md) {
@@ -46,7 +46,7 @@
   }
 }
 
-.p-reason__card03 .c-card03:nth-child(odd) .c-card03__contents::before {
+.p-reason__cards .c-card03:nth-child(odd) .c-card03__contents::before {
   margin-left: calc(50% - 50vw);
   right: 0;
   @include mq(md) {
@@ -59,7 +59,7 @@
   transform: translate(-100px, 0);
 }
 
-.p-reason__card03 .c-card03:nth-child(odd) .c-card03__text {
+.p-reason__cards .c-card03:nth-child(odd) .c-card03__text {
   margin-right: rem(6);
   @include mq(md) {
     margin-right: 0;
@@ -67,7 +67,7 @@
   }
 }
 
-.p-reason__card03 .c-card03:nth-child(odd) .c-card03__image {
+.p-reason__cards .c-card03:nth-child(odd) .c-card03__image {
   margin: rem(-103) 0 0 auto;
   @include mq(md) {
     margin: rem(-203) 0 0 auto;
@@ -76,7 +76,7 @@
 }
 
 // 偶数番目のカード
-.p-reason__card03 .c-card03:nth-child(even) .c-card03__contents {
+.p-reason__cards .c-card03:nth-child(even) .c-card03__contents {
   margin-left: rem(20);
   padding: rem(24) 0 rem(131) rem(15);
   @include mq(md) {
@@ -87,7 +87,7 @@
   }
 }
 
-.p-reason__card03 .c-card03:nth-child(even) .c-card03__contents::before {
+.p-reason__cards .c-card03:nth-child(even) .c-card03__contents::before {
   margin-right: calc(50% - 50vw);
   left: 0;
 }
@@ -101,13 +101,13 @@
   }
 }
 
-.p-reason__card03 .c-card03:nth-child(even) .c-card03__text {
+.p-reason__cards .c-card03:nth-child(even) .c-card03__text {
   @include mq(md) {
     margin-left: rem(194);
   }
 }
 
-.p-reason__card03 .c-card03:nth-child(even) .c-card03__image {
+.p-reason__cards .c-card03:nth-child(even) .c-card03__image {
   margin: rem(-103) auto 0 0;
   @include mq(md) {
     margin: rem(-208) auto 0 0;

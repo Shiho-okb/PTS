@@ -107,7 +107,7 @@
     <!-- 追従ボタン -->
     <div class="p-fixed">
       <!-- ボタン① -->
-      <a href="#" class="c-btn03 js-fixed">
+      <a href="#" class="p-fixed__btn c-btn03 js-fixed">
         予約はこちら
         <span></span>
       </a>
@@ -127,9 +127,9 @@
             <span class="p-mainvisual__title">不動産投資セミナー</span>
           </h2>
         </div>
-        <ul class="p-mainvisual__icon">
+        <ul class="p-mainvisual__icons">
           <!-- 物件数業界トップクラス -->
-          <li class="c-icon">
+          <li class="p-mainvisual__icon c-icon">
             <div class="c-icon__contents">
               <p class="c-icon__text">
                 物件数<br>業界<br>トップクラス
@@ -137,7 +137,7 @@
             </div>
           </li>
           <!-- 初月から利益がでる -->
-          <li class="c-icon">
+          <li class="p-mainvisual__icon c-icon">
             <div class="c-icon__contents">
               <p class="c-icon__text">
                 初月から<br>利益がでる
@@ -145,7 +145,7 @@
             </div>
           </li>
           <!-- 賃貸管理手数料永久無料 -->
-          <li class="c-icon">
+          <li class="p-mainvisual__icon c-icon">
             <div class="c-icon__contents">
               <p class="c-icon__text">
                 賃貸管理<br>手数料<br>永久無料
@@ -154,7 +154,7 @@
           </li>
         </ul>
         <div class="p-mainvisual__btn04 js-mainvisual-btn">
-          <a href="#" class="c-btn04">
+          <a href="#" class="p-mainvisual__btn04-link c-btn04">
             <picture class="c-btn04__image">
               <source srcset="./images/mv/mv_01PC.png" media="(min-width: 768px)" />
               <img src="./images/mv/mv_01.png" alt="カレンダーのイラスト" width="44" height="44">
@@ -164,7 +164,7 @@
           </a>
         </div>
         <div class="p-mainvisual__btn">
-          <a href="#" class="c-btn">
+          <a href="#" class="p-mainvisual__btn-link c-btn">
             無料セミナー日程を確認する
             <span></span>
           </a>
@@ -176,12 +176,13 @@
     <section class="p-learn">
       <div class="p-learn__inner l-inner">
         <div class="p-learn__wrapper">
-          <h2 class="c-title js-title" data-en="You can learn">
-            セミナーで学べること
+          <h2 class="p-learn__title c-title js-title">
+            <span class="c-title__en">You can learn</span>
+            <span class="c-title__ja">セミナーで学べること</span>
           </h2>
-          <ul class="p-learn__card">
+          <ul class="p-learn__cards">
             <!-- 不動産投資の仕組み -->
-            <li class="c-card">
+            <li class="p-learn__card c-card">
               <picture class="c-card__image">
                 <source srcset="./images/learn/learn_01PC.webp" media="(min-width: 768px)" />
                 <img src="./images/learn/learn_01.png" alt="グラフの数値を分析する女性のイラスト" width="101" height="75" loading="lazy" decoding="async">
@@ -192,7 +193,7 @@
               </p>
             </li>
             <!-- リスクヘッジ法 -->
-            <li class="c-card c-card--second">
+            <li class="p-learn__card c-card c-card--second">
               <picture class="c-card__image">
                 <source srcset="./images/learn/learn_02PC.webp" media="(min-width: 768px)" />
                 <img src="./images/learn/learn_02.png" alt="ヨットに乗って遠くを見る男性のイラスト" width="93" height="81" loading="lazy" decoding="async">
@@ -203,7 +204,7 @@
               </p>
             </li>
             <!-- 物件タイプ比較 -->
-            <li class="c-card c-card--third">
+            <li class="p-learn__card c-card c-card--third">
               <picture class="c-card__image">
                 <source srcset="./images/learn/learn_03PC.webp" media="(min-width: 768px)" />
                 <img src="./images/learn/learn_03.png" alt="パズルやタブレットを持つ女性たちのイラスト" width="101" height="74" loading="lazy" decoding="async">
@@ -214,7 +215,7 @@
               </p>
             </li>
             <!-- 独自サービス -->
-            <li class="c-card c-card--fourth">
+            <li class="p-learn__card c-card c-card--fourth">
               <picture class="c-card__image">
                 <source srcset="./images/learn/learn_04PC.webp" media="(min-width: 768px)" />
                 <img src="./images/learn/learn_04.png" alt="トロフィーを持った手を上げる女性のイラスト" width="85" height="89" loading="lazy" decoding="async">
@@ -250,7 +251,7 @@
             <span class="p-cta__text02">無料プレゼント！</span>
           </h2>
           <div class="p-cta__btn">
-            <a href="#" class="c-btn">
+            <a href="#" class="p-cta__btn-link c-btn">
               無料セミナー日程を確認する
               <span></span>
             </a>
@@ -263,15 +264,14 @@
     <section class="p-participant l-participant">
       <div class="p-participant__inner l-inner">
         <div class="p-participant__wrapper">
-          <h2 class="c-title js-title" data-en="Participant">
-            セミナー参加者ってどんな人？
+          <h2 class="p-participant__title c-title js-title">
+            <span class="c-title__en">Participant</span>
+            <span class="c-title__ja">セミナー参加者ってどんな人？</span>
           </h2>
-          <!-- <div class="p-participant__title">
-          </div> -->
-          <div class="p-participant__chart">
-            <div class="p-participant__chart-item">
+          <div class="p-participant__chart p-participant-chart">
+            <div class="p-participant-chart__item">
               <!-- 年齢チャート -->
-              <div class="c-chart">
+              <div class="p-participant-chart__parts c-chart">
                 <div class="c-chart__center">年齢</div>
                 <p class="c-chart__label c-chart__label--orange c-chart__label--30">
                   <span class="c-chart__category">30代</span>
@@ -282,14 +282,14 @@
                   <span class="c-chart__rate">30%</span>
                 </p>
               </div>
-              <p class="p-participant__chart-text">
+              <p class="p-participant-chart__text">
                 30〜40代で<br>
                 80%以上！
               </p>
             </div>
-            <div class="p-participant__chart-item">
+            <div class="p-participant-chart__item">
               <!-- 年収チャート -->
-              <div class="c-chart c-chart--income">
+              <div class="p-participant-chart__parts c-chart c-chart--income">
                 <div class="c-chart__center">年収</div>
                 <p class="c-chart__label c-chart__label--orange c-chart__label--600">
                   <span class="c-chart__category">600〜799万</span>
@@ -300,7 +300,7 @@
                   <span class="c-chart__rate">19%</span>
                 </p>
               </div>
-              <p class="p-participant__chart-text">
+              <p class="p-participant-chart__text">
                 年収600〜799万層が<br>
                 最も多いです！
               </p>
@@ -313,13 +313,14 @@
     <!-- お客さまの声 -->
     <section class="p-voice l-voice">
       <div class="p-voice__wrapper">
-        <h2 class="c-title js-title" data-en="Voice">
-          お客さまの声
+        <h2 class="p-voice__title c-title js-title">
+          <span class="c-title__en">Voice</span>
+          <span class="c-title__ja">お客さまの声</span>
         </h2>
-        <div class="swiper">
-          <div class="swiper-wrapper">
+        <div class="p-voice__swiper swiper">
+          <div class="p-voice__swiper-wrapper swiper-wrapper">
             <!-- カード01 -->
-            <a href="#" class="swiper-slide c-card02">
+            <a href="#" class="p-voice__swiper-slide swiper-slide c-card02">
               <span class="c-card02__number">#01</span>
               <img src="./images/voice/voice_01.png" alt="20代男性会社員の写真" width="213" height="142" loading="lazy" decoding="async">
               <div class="c-card02__wrapper">
@@ -332,7 +333,7 @@
               </div>
             </a>
             <!-- カード02 -->
-            <a href="#" class="swiper-slide c-card02">
+            <a href="#" class="p-voice__swiper-slide swiper-slide c-card02">
               <span class="c-card02__number">#02</span>
               <img src="./images/voice/voice_02.png" alt="20代男性会社員の写真" width="213" height="142" loading="lazy" decoding="async">
               <div class="c-card02__wrapper">
@@ -345,7 +346,7 @@
               </div>
             </a>
             <!-- カード03 -->
-            <a href="#" class="swiper-slide c-card02">
+            <a href="#" class="p-voice__swiper-slide swiper-slide c-card02">
               <span class="c-card02__number">#03</span>
               <img src="./images/voice/voice_03.png" alt="20代男性会社員の写真" width="213" height="142" loading="lazy" decoding="async">
               <div class="c-card02__wrapper">
@@ -358,7 +359,7 @@
               </div>
             </a>
             <!-- カード04 -->
-            <a href="#" class="swiper-slide c-card02">
+            <a href="#" class="p-voice__swiper-slide swiper-slide c-card02">
               <span class="c-card02__number">#04</span>
               <img src="./images/voice/voice_04.png" alt="20代男性会社員の写真" width="213" height="142" loading="lazy" decoding="async">
               <div class="c-card02__wrapper">
@@ -371,7 +372,7 @@
               </div>
             </a>
             <!-- カード05 -->
-            <a href="#" class="swiper-slide c-card02">
+            <a href="#" class="p-voice__swiper-slide swiper-slide c-card02">
               <span class="c-card02__number">#05</span>
               <img src="./images/voice/voice_05.png" alt="20代男性会社員の写真" width="213" height="142" loading="lazy" decoding="async">
               <div class="c-card02__wrapper">
@@ -384,7 +385,7 @@
               </div>
             </a>
             <!-- カード06 -->
-            <a href="#" class="swiper-slide c-card02">
+            <a href="#" class="p-voice__swiper-slide swiper-slide c-card02">
               <span class="c-card02__number">#06</span>
               <img src="./images/voice/voice_06.png" alt="20代男性会社員の写真" width="213" height="142" loading="lazy" decoding="async">
               <div class="c-card02__wrapper">
@@ -404,12 +405,13 @@
     <!-- 私たちが選ばれる理由 -->
     <section class="p-reason l-reason">
       <div class="p-reason__inner l-inner">
-        <h2 class="c-title js-title" data-en="Reason">
-          私たちが選ばれる理由
+        <h2 class="p-reason__title c-title js-title">
+          <span class="c-title__en">Reason</span>
+          <span class="c-title__ja">私たちが選ばれる理由</span>
         </h2>
-        <ul class="p-reason__card03">
+        <ul class="p-reason__cards">
           <!-- カード01 -->
-          <li class="c-card03">
+          <li class="p-reason__card c-card03">
             <div class="c-card03__contents">
               <div class="c-card03__head c-card03__head--left js-head__left">
                 <span class="c-card03__num">01</span>
@@ -428,7 +430,7 @@
             </picture>
           </li>
           <!-- カード02 -->
-          <li class="c-card03">
+          <li class="p-reason__card c-card03">
             <div class="c-card03__contents">
               <div class="c-card03__head c-card03__head--right js-head__right">
                 <span class="c-card03__num">02</span>
@@ -448,7 +450,7 @@
             </picture>
           </li>
           <!-- カード03 -->
-          <li class="c-card03">
+          <li class="p-reason__card c-card03">
             <div class="c-card03__contents">
               <div class="c-card03__head c-card03__head--left js-head__left">
                 <span class="c-card03__num">03</span>
@@ -480,7 +482,7 @@
             <span class="p-cta__text02">無料プレゼント！</span>
           </h2>
           <div class="p-cta__btn">
-            <a href="#" class="c-btn">
+            <a href="#" class="p-cta__btn-link c-btn">
               無料セミナー日程を確認する
               <span></span>
             </a>
@@ -492,12 +494,13 @@
     <!-- セミナー受講までの流れ -->
     <section class="p-flow l-flow">
       <div class="p-flow__inner l-inner">
-        <h2 class="c-title js-title" data-en="Flow">
-          セミナー受講までの流れ
+        <h2 class="p-flow__title c-title js-title">
+          <span class="c-title__en">Flow</span>
+          <span class="c-title__ja">セミナー受講までの流れ</span>
         </h2>
         <ul class="p-flow__wrapper">
           <!-- お申し込み -->
-          <li class="c-card04">
+          <li class="p-flow__card c-card04">
             <div class="c-card04__image">
               <img src="./images/flow/flow_01.png" alt="スマートフォンのアイコン" width="46" height="43" loading="lazy" decoding="async">
             </div>
@@ -511,7 +514,7 @@
             </div>
           </li>
           <!-- お見積もり -->
-          <li class="c-card04 c-card04--second">
+          <li class="p-flow__card c-card04 c-card04--second">
             <div class="c-card04__image">
               <img src="./images/flow/flow_02.png" alt="メールのアイコン" width="48" height="32" loading="lazy" decoding="async">
             </div>
@@ -525,7 +528,7 @@
             </div>
           </li>
           <!-- 申請完了 -->
-          <li class="c-card04 c-card04--third">
+          <li class="p-flow__card c-card04 c-card04--third">
             <div class="c-card04__image">
               <img src="./images/flow/flow_03.png" alt="メモとペンのアイコン" width="58" height="49" loading="lazy" decoding="async">
             </div>
@@ -539,7 +542,7 @@
             </div>
           </li>
           <!-- 入金確認 -->
-          <li class="c-card04 c-card04--fourth">
+          <li class="p-flow__card c-card04 c-card04--fourth">
             <div class="c-card04__image">
               <img src="./images/flow/flow_04.png" alt="クレジットカードと現金のアイコン" width="72" height="38" loading="lazy" decoding="async">
             </div>
@@ -553,7 +556,7 @@
             </div>
           </li>
           <!-- 研修スタート -->
-          <li class="c-card04 c-card04--fifth">
+          <li class="p-flow__card c-card04 c-card04--fifth">
             <div class="c-card04__image">
               <img src="./images/flow/flow_05.png" alt="オンライン研修のアイコン" width="53" height="53" loading="lazy" decoding="async">
             </div>
@@ -573,12 +576,13 @@
     <!-- 無料セミナースケジュール -->
     <section class="p-schedule l-schedule">
       <div class="p-schedule__inner l-inner">
-        <h2 class="c-title js-title" data-en="Schedule">
-          無料セミナースケジュール
+        <h2 class="p-schedule__title c-title js-title">
+          <span class="c-title__en">Schedule</span>
+          <span class="c-title__ja">無料セミナースケジュール</span>
         </h2>
         <div class="p-schedule__wrapper">
           <!-- カード01 -->
-          <div class="c-card05">
+          <div class="p-schedule__card c-card05">
             <div class="c-card05__grid">
               <div class="c-card05__date">
                 5/20(月)
@@ -618,7 +622,7 @@
             </div>
           </div>
           <!-- カード02 -->
-          <div class="c-card05 c-card05--second">
+          <div class="p-schedule__card c-card05 c-card05--second">
             <div class="c-card05__grid">
               <div class="c-card05__date">
                 5/20(月)
@@ -654,7 +658,7 @@
             </div>
           </div>
           <!-- カード03 -->
-          <div class="c-card05 c-card05--second">
+          <div class="p-schedule__card c-card05 c-card05--second">
             <div class="c-card05__grid">
               <div class="c-card05__date">
                 5/20(月)
@@ -690,7 +694,7 @@
             </div>
           </div>
           <!-- カード04 -->
-          <div class="c-card05 c-card05--second">
+          <div class="p-schedule__card c-card05 c-card05--second">
             <div class="c-card05__grid">
               <div class="c-card05__date">
                 5/20(月)
@@ -726,7 +730,7 @@
             </div>
           </div>
           <!-- カード05 -->
-          <div class="c-card05 c-card05--second">
+          <div class="p-schedule__card c-card05 c-card05--second">
             <div class="c-card05__grid">
               <div class="c-card05__date">
                 5/20(月)
@@ -768,8 +772,9 @@
     <!-- お申し込みはこちら -->
     <section class="p-contact">
       <div class="p-contact__inner l-inner">
-        <h2 class="c-title js-title" data-en="Contact">
-          お申し込みはこちら
+        <h2 class="p-contact__title c-title js-title">
+          <span class="c-title__en">Contact</span>
+          <span class="c-title__ja">お申し込みはこちら</span>
         </h2>
         <!-- フォーム -->
         <form class="p-contact__form p-contact-form">
