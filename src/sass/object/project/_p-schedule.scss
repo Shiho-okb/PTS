@@ -2,6 +2,10 @@
 
 .p-schedule {
   position: relative;
+  padding-block: rem(61.5) rem(60.5);
+  @include mq(md) {
+    padding-block: rem(107) rem(93);
+  }
 }
 
 .p-schedule::before {

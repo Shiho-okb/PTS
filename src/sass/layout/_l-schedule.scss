@@ -2,9 +2,7 @@
 
 .l-schedule {
   margin-top: rem(30);
-  padding-block: rem(61.5) rem(60.5);
   @include mq(md) {
     margin-top: rem(98);
-    padding-block: rem(107) rem(93);
   }
 }

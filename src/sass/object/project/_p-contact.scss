@@ -1,10 +1,14 @@
 @use "global" as *;
 
 .p-contact {
+  padding-block: rem(59) rem(60);
   background: linear-gradient(
     180deg,
     #2a6eae,
     #164a7a);
+  @include mq(md) {
+    padding-block: rem(91) rem(90);
+  }
 }
 
 .p-contact .c-title {

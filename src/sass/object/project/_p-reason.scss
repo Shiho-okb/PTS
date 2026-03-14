@@ -3,6 +3,10 @@
 .p-reason {
   position: relative;
   overflow: hidden;
+  padding-block: rem(64) rem(62);
+  @include mq(md) {
+    padding-block: rem(92) rem(90);
+  }
 }
 
 .p-reason::before {

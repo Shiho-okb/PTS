@@ -2,9 +2,7 @@
 
 .l-reason {
   margin-top: rem(60);
-  padding-block: rem(64) rem(62);
   @include mq(md) {
     margin-top: rem(111);
-    padding-block: rem(92) rem(90);
   }
 }
