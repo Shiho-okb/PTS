@@ -3,10 +3,29 @@
 .c-card04 {
   display: flex;
   gap: rem(20);
+  position: relative;
   @include mq(md) {
     flex-direction: column;
     align-items: center;
     gap: rem(17);
+  }
+}
+
+.c-card04:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: rem(54.5);
+  top: rem(109);
+  bottom: rem(-30);
+  width: rem(2);
+  background: $lightblue02;
+  @include mq(md) {
+    top: rem(86);
+    left: 86%;
+    transform: translateX(50%);
+    width: rem(40);
+    height: rem(4);
+    bottom: auto;
   }
 }
 
@@ -35,24 +54,6 @@
     width: rem(74);
     height: rem(109);
     aspect-ratio: 74 / 109;
-  }
-}
-
-.c-card04:not(:last-child) .c-card04__image::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: rem(2);
-  height: calc(100% + rem(30));
-  background: $lightblue02;
-  @include mq(md) {
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-    width: rem(40);
-    height: rem(4);
   }
 }
 
